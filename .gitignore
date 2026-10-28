@@ -1,5 +1,14 @@
+# dependencies & build output
 node_modules
 dist
+.vercel
+
+# secrets: only .env.example is committed
 .env
 .env.*
 !.env.example
+
+# misc
+*.log
+.DS_Store
+Thumbs.db

@@ -14,27 +14,10 @@ export const NAV = [
   { to: '/contact', label: 'Contact Us' },
 ]
 
-export const SLIDES = [
-  { img: '/images/slides/1.jpg', title: ["We'll Get", 'Ready'], desc: 'for the Ride of your Life' },
-  { img: '/images/slides/2.jpg', title: ['We are', 'dedicated to bring'], desc: 'People & Companies together in positive working relationship' },
-  { img: '/images/slides/3.jpg', title: ['We Deliver', 'Value Advice'], desc: '& an Expert Point of View' },
-  { img: '/images/slides/english.jpg', title: ['Communicative', 'English Training'], desc: 'From classroom English to workplace communication' },
-  { img: '/images/slides/soft.jpg', title: ['Soft Skill &', 'Pre Placement'], desc: 'Be interview-ready and workplace-ready' },
-  { img: '/images/slides/editing.jpg', title: ['Editing &', 'Page Setting'], desc: 'Polish your manuscript before it reaches readers' },
-  { img: '/images/slides/book.jpg', title: ['Book Cover', 'Design & Promotion'], desc: 'The first statement your book makes' },
-]
-
 export const SERVICES = [
   { img: '/images/imagebox/1.jpg', title: 'Manpower Recruitment Consulting', desc: "We with our prolong experience along with a deep understanding of Manpower Recruitment Processes, provide comprehensive recruitment solutions to maximize our clients' Manpower potential." },
   { img: '/images/imagebox/2.jpg', title: 'Corporate / Executive Training', desc: 'Training Need Identification, Delivering need based training and skill development in the area of Management / Soft Skills.' },
   { img: '/images/imagebox/3.jpg', title: 'Graphic / Website Designing', desc: 'With minimal computer knowledge, you can build on efficient websites. In this, you can learn from basic to advanced level so that you can start developing your own web pages.' },
-]
-
-export const PROGRAMS = [
-  { icon: 'english', title: 'Communicative English Training', desc: 'English has become Internationally Common Tongue. It is estimated that the number of people...' },
-  { icon: 'soft', title: 'Soft Skill & Pre Placement Training', desc: 'Specifically, MNC & civil service, recruitment process consist of verbal ability test & F2F ...' },
-  { icon: 'edit', title: 'Editing & Page setting', desc: 'Every book needs editing, yet editing yourself is nearly impossible. Even bestselling ...' },
-  { icon: 'book', title: 'Book Cover Design & Promotion', desc: 'A good cover design is the first statement your book makes to the reader. We understand the pulse ...' },
 ]
 
 export const PARTNERS = [
