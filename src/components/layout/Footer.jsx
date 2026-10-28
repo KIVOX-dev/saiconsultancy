@@ -19,7 +19,7 @@ export default function Footer() {
           </div>
           <div>
             <h6>Programs</h6>
-            <ul>{PROGRAMS.map((p) => <li key={p}><Link to="/what-we-do">{p}</Link></li>)}</ul>
+            <ul>{PROGRAMS.map((p) => <li key={p}><Link to={p.startsWith('Campus') ? '/campus-outreach' : '/what-we-do'}>{p}</Link></li>)}</ul>
           </div>
           <div>
             <h6>Company</h6>
