@@ -1,0 +1,30 @@
+{
+    "name": "sai-consultancy",
+    "version": "1.0.0",
+    "description": "SAI Consultancy website: React + Framer Motion front end with a Groq-powered assistant (Vercel function)",
+    "dependencies": {
+        "express": "^5.3.0",
+        "framer-motion": "^14.7.1",
+        "react": "^19.3.1",
+        "react-dom": "^19.3.1",
+        "react-router-dom": "^7.18.5"
+    },
+    "devDependencies": {
+        "@vitejs/plugin-react": "^6.1.2",
+        "concurrently": "^10.0.6",
+        "vite": "^8.3.5"
+    },
+    "scripts": {
+        "build": "vite build",
+        "preview": "vite preview",
+        "dev": "concurrently -k -n web,api -c blue,green \"vite\" \"node --env-file=.env server/index.js\"",
+        "dev:web": "vite",
+        "server": "node --env-file=.env server/index.js",
+        "start": "npm run build && node --env-file=.env server/index.js"
+    },
+    "type": "module",
+    "engines": {
+        "node": ">=20"
+    },
+    "private": true
+}
