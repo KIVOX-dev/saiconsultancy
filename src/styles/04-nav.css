@@ -1,0 +1,26 @@
+/* ---------- nav: full-width bar ---------- */
+.nav { position: fixed; top: 0; left: 0; right: 0; z-index: 40; display: flex; align-items: center; gap: 36px; height: 76px; padding-inline: max(20px, calc((100% - 1320px) / 2 + 56px)); background: rgba(255, 255, 255, 0.94); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+.nav-logo { display: flex; align-items: center; gap: 10px; }
+.wordmark { font-weight: 600; letter-spacing: 0.04em; color: var(--ink); font-size: 16px; white-space: nowrap; }
+.wordmark b { font-weight: 600; }
+.nav-links { display: flex; gap: 6px; }
+.nav-link { position: relative; display: block; padding: 10px 14px; font-size: 14.5px; color: var(--text); transition: color 0.3s var(--ease); }
+.nav-link b { position: relative; font-weight: 400; }
+.nav-link:hover, .nav-link.is-active { color: var(--ink); }
+.nav-pill { position: absolute; left: 14px; right: 14px; bottom: 0; height: 2px; background: var(--green); }
+.nav-cta { margin-left: auto; display: inline-flex; align-items: center; gap: 10px; padding: 11px 18px; background: var(--blue); color: #fff; font-size: 14.5px; font-weight: 500; transition: background 0.3s var(--ease); }
+.nav-cta:hover { background: var(--blue-d); }
+.nav-cta .btn-ico { display: grid; }
+.burger { display: none; margin-left: auto; width: 44px; height: 44px; border: 1px solid var(--line); background: #fff; position: relative; }
+.burger span { position: absolute; left: 12px; right: 12px; height: 2px; background: var(--ink); transition: transform 0.5s var(--ease), top 0.5s var(--ease); }
+.burger span:nth-child(1) { top: 16px; } .burger span:nth-child(2) { top: 25px; }
+.burger.open span:nth-child(1) { top: 20.5px; transform: rotate(45deg); }
+.burger.open span:nth-child(2) { top: 20.5px; transform: rotate(-45deg); }
+.menu-overlay { position: fixed; inset: 0; z-index: 35; background: rgba(255, 255, 255, 0.97); display: flex; flex-direction: column; justify-content: center; padding: 100px 28px 40px; }
+.menu-links { display: grid; gap: 2px; }
+.menu-mask { overflow: hidden; border-bottom: 1px solid var(--line); }
+.menu-links a { display: flex; align-items: baseline; gap: 14px; font-size: clamp(32px, 9vw, 54px); font-weight: 400; color: var(--ink); letter-spacing: -0.03em; padding: 10px 0; }
+.menu-links a small { font-family: var(--mono); font-size: 12px; color: var(--green-d); }
+.menu-links a.active { color: var(--blue); }
+.menu-foot { margin-top: 36px; font-family: var(--mono); font-size: 12px; }
+

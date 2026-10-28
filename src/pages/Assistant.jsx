@@ -1,10 +1,10 @@
 import { useEffect, useRef, useState } from 'react'
 import { motion } from 'framer-motion'
-import Icon from '../components/Icon.jsx'
-import Illo from '../components/Illo.jsx'
-import { Messages, useChat } from '../components/chat.jsx'
-import { PageHero, Reveal, Bezel, EASE, stagger, rise } from '../components/ui.jsx'
-import { CONTACT } from '../data.js'
+import Icon from '../components/ui/Icon.jsx'
+import Illo from '../components/ui/Illo.jsx'
+import { Messages, useChat } from '../components/chat/useChat.jsx'
+import { PageHero, Reveal, Bezel, EASE, stagger, rise } from '../components/ui/primitives.jsx'
+import { CONTACT } from '../data/site.js'
 
 const TOPICS = [
   ['target', 'Training programs', 'What programs do you offer?'],

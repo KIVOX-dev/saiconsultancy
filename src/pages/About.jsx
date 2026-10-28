@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
-import Icon from '../components/Icon.jsx'
-import Illo from '../components/Illo.jsx'
-import { PageHero, SectionHead, Reveal, Bezel, EASE, stagger, rise } from '../components/ui.jsx'
+import Icon from '../components/ui/Icon.jsx'
+import Illo from '../components/ui/Illo.jsx'
+import { PageHero, SectionHead, Reveal, Bezel, EASE, stagger, rise } from '../components/ui/primitives.jsx'
 
 const PILLARS = [
   ['target', 'Structured aptitude and employability training'],

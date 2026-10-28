@@ -1,7 +1,7 @@
-import Icon from '../components/Icon.jsx'
-import Illo from '../components/Illo.jsx'
-import Roadmap from '../components/Roadmap.jsx'
-import { PageHero, SectionHead, Reveal, Bezel, Button } from '../components/ui.jsx'
+import Icon from '../components/ui/Icon.jsx'
+import Illo from '../components/ui/Illo.jsx'
+import Roadmap from '../components/sections/Roadmap.jsx'
+import { PageHero, SectionHead, Reveal, Bezel, Button } from '../components/ui/primitives.jsx'
 
 const BUILD = ['Aptitude, logical reasoning, and problem solving', 'Communicative English and workplace communication', 'Resume structuring and professional positioning', 'Interview skills for HR and technical rounds', 'Professional behavior and workplace etiquette', 'Digital workplace and productivity skills']
 const PREPARE = ['Mock interviews with personalised feedback', 'Progressive assessments and practice (Test Your Metrics)', 'Role-play scenarios and group discussions', 'Skill-gap mapping and personalized guidance', 'Mentor interaction and continuous improvement tracking', 'Career awareness and role-based training']

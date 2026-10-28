@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
-import Icon from './Icon.jsx'
-import Illo from './Illo.jsx'
-import { Bezel, EASE, stagger, rise } from './ui.jsx'
+import Icon from '../ui/Icon.jsx'
+import Illo from '../ui/Illo.jsx'
+import { Bezel, EASE, stagger, rise } from '../ui/primitives.jsx'
 
 const STEPS = [
   { icon: 'target', t: 'Assess', d: 'Identify strengths and gaps with diagnostic assessments.' },

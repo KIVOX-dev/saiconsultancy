@@ -1,11 +1,11 @@
 import { useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import Icon from '../components/Icon.jsx'
-import Illo from '../components/Illo.jsx'
-import Marquee from '../components/Marquee.jsx'
-import Outreach from '../components/Outreach.jsx'
-import { PageHero, SectionHead, Reveal, Bezel, Button, EASE } from '../components/ui.jsx'
-import { WHAT_WE_DO, PROGRAM_ICONS, OUR_SERVICES } from '../data.js'
+import Icon from '../components/ui/Icon.jsx'
+import Illo from '../components/ui/Illo.jsx'
+import Marquee from '../components/ui/Marquee.jsx'
+import Outreach from '../components/sections/Outreach.jsx'
+import { PageHero, SectionHead, Reveal, Bezel, Button, EASE } from '../components/ui/primitives.jsx'
+import { WHAT_WE_DO, PROGRAM_ICONS, OUR_SERVICES } from '../data/site.js'
 
 function Program({ n, data, open, onToggle }) {
   const [title, desc, pts] = data

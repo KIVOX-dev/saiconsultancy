@@ -1,9 +1,9 @@
 import { useEffect, useRef, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import Icon from './Icon.jsx'
-import Illo from './Illo.jsx'
-import { EASE } from './ui.jsx'
-import { Messages, useChat } from './chat.jsx'
+import Icon from '../ui/Icon.jsx'
+import Illo from '../ui/Illo.jsx'
+import { EASE } from '../ui/primitives.jsx'
+import { Messages, useChat } from './useChat.jsx'
 import { Link, useLocation } from 'react-router-dom'
 
 const SUGGESTIONS = ['What programs do you offer?', 'How do you help with placements?', 'How can I contact you?']

@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom'
-import { CONTACT, NAV } from '../data.js'
-import Icon from './Icon.jsx'
+import { CONTACT, NAV } from '../../data/site.js'
+import Icon from '../ui/Icon.jsx'
 
 const PROGRAMS = ['Campus Outreach & Admissions', 'Soft Skills', 'Aptitude Training', 'Communicative English', 'Interview Readiness', 'Job-Oriented Training', 'Career Guidance']
 

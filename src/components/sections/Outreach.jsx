@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion'
-import Icon from './Icon.jsx'
-import Illo from './Illo.jsx'
-import { Button, Eyebrow, Reveal, SplitHeading, EASE, stagger, rise } from './ui.jsx'
+import Icon from '../ui/Icon.jsx'
+import Illo from '../ui/Illo.jsx'
+import { Button, Eyebrow, Reveal, SplitHeading, EASE, stagger, rise } from '../ui/primitives.jsx'
 
 const OFFERINGS = [
   ['building', 'School & junior-college visits', 'On-site sessions that introduce your institution, courses and career outcomes to prospective students.'],

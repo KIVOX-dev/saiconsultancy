@@ -1,0 +1,23 @@
+/* ---------- boxes (kept names: bezel / bezel-core) ---------- */
+.bezel { height: 100%; background: #fff; border: 1px solid var(--line); transition: border-color 0.5s var(--ease), box-shadow 0.5s var(--ease); }
+.bezel:hover { border-color: #c7d3e2; }
+.bezel-core { position: relative; height: 100%; overflow: hidden; }
+.core-navy { background: var(--dark); }
+.dark-box, .info-card.dark { background: var(--dark); border-color: var(--dark); color: #aebbd0; }
+
+/* ---------- buttons ---------- */
+.btn { display: inline-flex; align-items: center; gap: 10px; padding: 13px 20px; border: 1px solid transparent; font-weight: 500; font-size: 15px; transition: background 0.4s var(--ease), color 0.4s var(--ease), transform 0.4s var(--ease), border-color 0.4s var(--ease); }
+.btn:active { transform: scale(0.98); }
+.btn-ico { display: grid; place-items: center; transition: transform 0.4s var(--ease); }
+.btn:hover .btn-ico { transform: translate(3px, -2px); }
+.btn-primary { background: var(--blue); color: #fff; }
+.btn-primary:hover { background: var(--blue-d); }
+.btn-accent { background: var(--green); color: #04240f; }
+.btn-accent:hover { background: #3fd07e; }
+.btn-ghost { background: #fff; color: var(--ink); border-color: #cfd8e3; }
+.btn-ghost:hover { border-color: var(--ink); }
+.dark .btn-ghost { background: transparent; color: #fff; border-color: rgba(255, 255, 255, 0.3); }
+.icon-chip { width: 46px; height: 46px; display: grid; place-items: center; background: var(--blue); color: #fff; flex: none; margin-bottom: 22px; }
+.icon-chip.sm { width: 36px; height: 36px; margin: 0; }
+.icon-chip.on-dark { background: var(--green); color: #04240f; }
+

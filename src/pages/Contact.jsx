@@ -1,9 +1,9 @@
 import { useState } from 'react'
 import { useSearchParams } from 'react-router-dom'
-import Icon from '../components/Icon.jsx'
-import Illo from '../components/Illo.jsx'
-import { PageHero, Reveal, Bezel, Button } from '../components/ui.jsx'
-import { CONTACT } from '../data.js'
+import Icon from '../components/ui/Icon.jsx'
+import Illo from '../components/ui/Illo.jsx'
+import { PageHero, Reveal, Bezel, Button } from '../components/ui/primitives.jsx'
+import { CONTACT } from '../data/site.js'
 
 export default function Contact() {
   const [params] = useSearchParams()

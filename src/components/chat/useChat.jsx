@@ -1,7 +1,7 @@
 // Chat pieces shared by the floating widget and the full /assistant page.
 import { useCallback, useState } from 'react'
 import { motion } from 'framer-motion'
-import { EASE } from './ui.jsx'
+import { EASE } from '../ui/primitives.jsx'
 
 export const GREETING = "Hi! I'm the SAI Consultancy assistant. Ask me about our programs, placement support or how to get in touch."
 

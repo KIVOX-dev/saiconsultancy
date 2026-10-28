@@ -1,0 +1,40 @@
+/* ---------- footer ---------- */
+.footer { background: var(--dark); color: #8fa0b8; border-top: 1px solid rgba(255, 255, 255, 0.1); }
+.footer-grid { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1.2fr; gap: 40px; padding: 70px 0 54px; }
+.footer-brand { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+.footer .wordmark { color: #fff; font-size: 20px; }
+.tagline { font-family: var(--mono); font-size: 13px; color: var(--green); letter-spacing: 0.04em; }
+.footer h6 { color: #fff; font-family: var(--mono); font-size: 12px; letter-spacing: 0.08em; text-transform: uppercase; margin-bottom: 18px; font-weight: 500; }
+.footer li { margin-bottom: 10px; }
+.footer a { display: inline-flex; align-items: center; gap: 8px; transition: color 0.3s var(--ease); }
+.footer a:hover { color: #fff; }
+.footer-bottom { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; padding: 22px 0; border-top: 1px solid rgba(255, 255, 255, 0.1); font-size: 13px; }
+
+/* ---------- chat widget ---------- */
+.chat { position: fixed; right: 22px; bottom: 22px; z-index: 45; }
+.chat-fab { width: 58px; height: 58px; border: 0; background: var(--blue); color: #fff; display: grid; place-items: center; box-shadow: 0 16px 34px -12px rgba(26, 75, 130, 0.7); }
+.chat-fab span { display: grid; place-items: center; }
+.chat-panel { position: absolute; right: 0; bottom: 72px; width: min(380px, calc(100vw - 32px)); height: min(560px, calc(100dvh - 130px)); display: flex; flex-direction: column; background: #fff; border: 1px solid var(--line); box-shadow: 0 40px 80px -24px rgba(14, 42, 74, 0.45); transform-origin: bottom right; }
+.chat-head { display: flex; align-items: center; gap: 12px; padding: 14px 16px; background: var(--dark); color: #fff; }
+.chat-head b { display: block; font-size: 16px; font-weight: 500; }
+.chat-head small { display: flex; align-items: center; gap: 6px; font-size: 12px; color: #9db0c9; }
+.chat-head small i { width: 7px; height: 7px; background: var(--green); }
+.chat-head > button { margin-left: auto; width: 32px; height: 32px; border: 1px solid rgba(255, 255, 255, 0.25); background: transparent; color: #fff; display: grid; place-items: center; }
+.chat-avatar { width: 36px; height: 36px; background: #fff; display: grid; place-items: center; }
+.chat-body { flex: 1; overflow-y: auto; padding: 18px 16px; display: flex; flex-direction: column; gap: 10px; background: var(--soft); }
+.msg { max-width: 86%; padding: 11px 14px; font-size: 14.5px; line-height: 1.55; white-space: pre-wrap; word-break: break-word; }
+.msg.assistant { align-self: flex-start; background: #fff; border: 1px solid var(--line); color: var(--ink); }
+.msg.user { align-self: flex-end; background: var(--blue); color: #fff; }
+.msg.typing { display: flex; gap: 5px; padding: 14px 16px; }
+.msg.typing i { width: 7px; height: 7px; border-radius: 50%; background: var(--blue); opacity: 0.4; animation: bounce 1.1s var(--ease) infinite; }
+.msg.typing i:nth-child(2) { animation-delay: 0.15s; } .msg.typing i:nth-child(3) { animation-delay: 0.3s; }
+@keyframes bounce { 0%, 60%, 100% { transform: translateY(0); } 30% { transform: translateY(-6px); opacity: 1; } }
+.chat-chips { display: flex; flex-direction: column; align-items: flex-start; gap: 8px; margin-top: 4px; }
+.chat-chips button { border: 1px solid #cfd8e3; background: #fff; color: var(--blue); font-size: 13px; padding: 8px 12px; transition: background 0.3s, color 0.3s; }
+.chat-chips button:hover { background: var(--blue); color: #fff; }
+.chat-input { display: flex; gap: 8px; padding: 12px; background: #fff; border-top: 1px solid var(--line); }
+.chat-input input { flex: 1; min-width: 0; font: inherit; font-size: 14.5px; color: var(--ink); border: 1px solid #cfd8e3; padding: 11px 14px; background: #fff; }
+.chat-input input:focus { outline: 0; border-color: var(--green); }
+.chat-input button { width: 44px; height: 44px; flex: none; border: 0; background: var(--green); color: #04240f; display: grid; place-items: center; }
+.chat-input button:disabled { opacity: 0.4; }
+

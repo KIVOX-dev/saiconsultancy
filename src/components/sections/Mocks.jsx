@@ -1,6 +1,6 @@
 import { motion } from 'framer-motion'
-import Icon from './Icon.jsx'
-import { EASE } from './ui.jsx'
+import Icon from '../ui/Icon.jsx'
+import { EASE } from '../ui/primitives.jsx'
 
 /** Illustrative UI mockups. Names and scores are sample data, labelled as such. */
 export function ReportMock({ delay = 0 }) {

@@ -1,9 +1,9 @@
 import { useEffect, useState } from 'react'
 import { Link, NavLink, useLocation } from 'react-router-dom'
 import { AnimatePresence, motion } from 'framer-motion'
-import { NAV, CONTACT } from '../data.js'
-import { EASE } from './ui.jsx'
-import Icon from './Icon.jsx'
+import { NAV, CONTACT } from '../../data/site.js'
+import { EASE } from '../ui/primitives.jsx'
+import Icon from '../ui/Icon.jsx'
 
 export default function Nav() {
   const [open, setOpen] = useState(false)

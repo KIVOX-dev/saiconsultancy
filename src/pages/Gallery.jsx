@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
-import Icon from '../components/Icon.jsx'
-import { PageHero, EASE } from '../components/ui.jsx'
-import { GALLERY } from '../data.js'
+import Icon from '../components/ui/Icon.jsx'
+import { PageHero, EASE } from '../components/ui/primitives.jsx'
+import { GALLERY } from '../data/site.js'
 
 const ALL = { key: 'all', label: 'All', images: GALLERY.flatMap((g) => g.images) }
 const TABS = [ALL, ...GALLERY]
