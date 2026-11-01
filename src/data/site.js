@@ -1,5 +1,5 @@
 export const CONTACT = {
-  email: 'saiconsultancy0009@gmail.com',
+  email: 'admin@saiconsultancy.in',
   phone: '+919087674688',
   phoneLabel: '+91 90876 74688',
 }

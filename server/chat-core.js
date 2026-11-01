@@ -82,6 +82,6 @@ export async function handleChat(payload, ip = 'unknown') {
     if (e.busy) {
       return { status: 503, body: { error: 'I am receiving a lot of questions right now. Please try again in a few seconds, or call +91 90876 74688.' } }
     }
-    return { status: 502, body: { error: 'The assistant is unavailable right now. Please call +91 90876 74688 or email saiconsultancy0009@gmail.com.' } }
+    return { status: 502, body: { error: 'The assistant is unavailable right now. Please call +91 90876 74688 or email admin@saiconsultancy.in.' } }
   }
 }

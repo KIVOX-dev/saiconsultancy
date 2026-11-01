@@ -377,7 +377,7 @@ const FAQS = [
   ['Who are your programs for?', 'Colleges and their students, plus early-career job seekers. Programs are mapped to department, specialisation and the industry roles your students are aiming for.'],
   ['How are the programs aligned to NEP?', 'Each of our ten programs is tied to NEP goals such as critical thinking, communication, experiential learning, vocational education and outcome-based evaluation.'],
   ['Do you help with placements?', 'Yes. We provide placement assistance for students we train and organise job fairs for partner colleges, inviting companies matched to student skill profiles.'],
-  ['How do we get started?', 'Call +91 90876 74688 or email saiconsultancy0009@gmail.com. We will understand your departments and goals, then propose a program plan.'],
+  ['How do we get started?', 'Call +91 90876 74688 or email admin@saiconsultancy.in. We will understand your departments and goals, then propose a program plan.'],
 ]
 
 function Faq() {
