@@ -32,6 +32,7 @@ export default async function handler(req, res) {
       htmlContent: `<p><b>Name:</b> ${esc(n)}<br><b>Email:</b> ${esc(e)}</p><p>${esc(m).replace(/\n/g, '<br>')}</p>`,
     }),
   }).catch(() => null)
+  if (!r || !r.ok) console.error('Brevo send failed:', r ? r.status : 'network error', r ? await r.text() : '')
   if (!r || !r.ok) return res.status(502).json({ error: 'Could not send your message. Please email or call us.' })
   return res.status(200).json({ ok: true })
 }
