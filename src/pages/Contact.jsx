@@ -11,11 +11,22 @@ export default function Contact() {
   const [f, setF] = useState({ name: '', email: '', message: phone ? `Please call me on ${phone}.` : '' })
   const set = (k) => (e) => setF({ ...f, [k]: e.target.value })
 
-  // No backend: open the visitor's mail client with the message prefilled.
-  const submit = (e) => {
+  const [state, setState] = useState('idle') // idle | sending | sent | error
+  const [err, setErr] = useState('')
+
+  const submit = async (e) => {
     e.preventDefault()
-    const body = `${f.message}\n\nFrom: ${f.name} (${f.email})`
-    window.location.href = `mailto:${CONTACT.email}?subject=${encodeURIComponent('Enquiry from ' + f.name)}&body=${encodeURIComponent(body)}`
+    setState('sending')
+    try {
+      const r = await fetch('/api/contact', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify(f) })
+      const d = await r.json().catch(() => ({}))
+      if (!r.ok) throw new Error(d.error || 'Something went wrong.')
+      setState('sent')
+      setF({ name: '', email: '', message: '' })
+    } catch (x) {
+      setErr(x.message)
+      setState('error')
+    }
   }
 
   return (
@@ -37,7 +48,10 @@ export default function Contact() {
                 <label>Your name<input required value={f.name} onChange={set('name')} /></label>
                 <label>Your email<input required type="email" value={f.email} onChange={set('email')} /></label>
                 <label>Message<textarea required rows="5" value={f.message} onChange={set('message')} /></label>
-                <Button>Send message</Button>
+                <input type="text" name="website" tabIndex="-1" autoComplete="off" value={f.website || ''} onChange={set('website')} style={{ display: 'none' }} aria-hidden="true" />
+                <Button>{state === 'sending' ? 'Sending...' : 'Send message'}</Button>
+                {state === 'sent' && <p role="status">Thank you! Your message has been sent. We will be in touch shortly.</p>}
+                {state === 'error' && <p role="alert">{err} You can also email {CONTACT.email}.</p>}
               </form>
             </Bezel>
           </Reveal>
