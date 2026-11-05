@@ -43,3 +43,36 @@
 .client-rows .marquee-group { gap: 18px; padding-right: 18px; }
 @media (max-width: 720px) { .client-logo { width: 170px; height: 90px; } }
 @media (max-width: 720px) { .chat-tip { display: none; } }
+
+/* Hub roadmap: centre circle, three stages either side, appearing one by one */
+.hub { position: relative; display: grid; grid-template-columns: 1fr 380px 1fr; grid-template-rows: repeat(3, 190px); max-width: 1180px; margin: 40px auto 20px; }
+.hub-core { position: absolute; left: 50%; top: 50%; width: 330px; height: 330px; margin: -165px 0 0 -165px; border-radius: 50%; display: grid; place-content: center; text-align: center; padding: 40px; background: radial-gradient(circle at 35% 30%, #e6f6ec, #cfe0f7 70%, #b9cdf5); box-shadow: inset 0 0 0 10px rgba(255, 255, 255, 0.6), 0 0 0 10px rgba(27, 185, 97, 0.18), 0 30px 60px -28px rgba(26, 75, 130, 0.5); }
+.hub-core strong { font-size: 64px; font-weight: 600; letter-spacing: -0.03em; color: var(--ink); line-height: 1; }
+.hub-core span { margin-top: 10px; font-family: var(--mono); font-size: 12px; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); }
+.hub-item { position: relative; display: flex; align-items: stretch; min-width: 0; }
+.hub-item.right { flex-direction: row-reverse; }
+.hub-text { order: 1; flex: none; width: 250px; position: relative; z-index: 2; align-self: flex-start; padding-top: 6px; }
+.hub-conn { order: 2; flex: 1; position: relative; min-width: 20px; }
+.hub-conn svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.hub-dot { position: absolute; top: var(--a); width: 12px; height: 12px; margin-top: -6px; border-radius: 50%; background: var(--c); z-index: 2; }
+.hub-item.left .hub-dot { left: -6px; }
+.hub-item.right .hub-dot { right: -6px; }
+.hub-node { order: 3; position: relative; z-index: 2; flex: none; align-self: center; width: 84px; height: 84px; border-radius: 50%; display: grid; place-items: center; color: var(--ink); background: #eaf7f0; box-shadow: 0 0 0 6px #d6f0e2, 0 14px 28px -14px rgba(26, 75, 130, 0.35); }
+.hub-item.row0.left .hub-node, .hub-item.row2.left .hub-node { margin-right: -50px; }
+.hub-item.row0.right .hub-node, .hub-item.row2.right .hub-node { margin-left: -50px; }
+.hub-item.row1 .hub-text { align-self: center; padding-top: 0; }
+.hub-item.row2 .hub-text { align-self: flex-end; padding-top: 0; }
+.hub-item.right .hub-text { text-align: right; }
+.hub-num { display: block; font-size: 44px; font-weight: 600; line-height: 1; margin-bottom: 8px; }
+.hub-text h4 { font-size: 22px; margin-bottom: 6px; }
+.hub-text p { margin: 0; font-size: 15px; }
+@media (max-width: 900px) {
+  .hub { padding: 0 4px; overflow: hidden; grid-template-columns: minmax(0, 1fr); grid-template-rows: none; gap: 22px; margin-top: 24px; }
+  .hub-core { position: relative; left: auto; top: auto; margin: 0 auto 14px; width: 240px; height: 240px; }
+  .hub-core strong { font-size: 48px; }
+  .hub-item, .hub-item.right { order: 0; grid-column: 1 !important; grid-row: auto !important; flex-direction: row; align-items: center; gap: 16px; }
+  .hub-item .hub-node, .hub-item.row0 .hub-node, .hub-item.row2 .hub-node { margin: 0 !important; width: 64px; height: 64px; order: 0; }
+  .hub-conn { display: none; }
+  .hub-item .hub-text, .hub-item.right .hub-text, .hub-item.row1 .hub-text, .hub-item.row2 .hub-text { order: 1; text-align: left; margin: 0; align-self: center; width: auto; flex: 1; min-width: 0; padding: 0; }
+  .hub-num { font-size: 28px; margin-bottom: 4px; }
+}

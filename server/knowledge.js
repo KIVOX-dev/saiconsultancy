@@ -44,5 +44,5 @@ TRAINING & PLACEMENT PROGRAMME 2026-27 (page: /training-placement)
 - India Skills Report 2026: about 56% of Indian graduates are employable.
 
 CONTACT
-Operations Head: Esakkimuthu V, 93630 22019, hr@saiconsultancy.in, info@saiconsultancy.in. Address: #71, Peelamedu, Maheshwari Nagar, Coimbatore, Tamil Nadu 641004.
+Operations Head: Esakkimuthu V, 93630 22019. Address: #71, Peelamedu, Maheshwari Nagar, Coimbatore, Tamil Nadu 641004.
 Phone/WhatsApp: +91 90876 74688. Email: admin@saiconsultancy.in. Contact page: /contact.`

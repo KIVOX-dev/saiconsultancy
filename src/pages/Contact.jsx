@@ -43,7 +43,6 @@ export default function Contact() {
               <Bezel className="info-card">
                 <Illo name="building" /><h4>Operations: {OFFICE.head.split(',')[0]}</h4>
                 <a className="big-link" href={`tel:${OFFICE.phone}`}>{OFFICE.phoneLabel}</a>
-                <p>{OFFICE.emails.map((e, i) => <span key={e}>{i > 0 && ' · '}<a href={`mailto:${e}`}>{e}</a></span>)}</p>
                 <p>{OFFICE.address}</p>
               </Bezel>
             </Reveal>

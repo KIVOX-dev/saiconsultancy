@@ -4,7 +4,6 @@ export const OFFICE = {
   head: 'Esakkimuthu V, Operations Head',
   phone: '+919363022019',
   phoneLabel: '93630 22019',
-  emails: ['hr@saiconsultancy.in', 'info@saiconsultancy.in'],
   address: '#71, Peelamedu, Maheshwari Nagar, Coimbatore, Tamil Nadu 641004',
   web: 'saiconsultancy.in',
 }

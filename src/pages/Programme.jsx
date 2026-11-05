@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { motion, useScroll, useSpring } from 'framer-motion'
 import Illo from '../components/ui/Illo.jsx'
 import { PageHero, SectionHead, Reveal, Bezel, Button, EASE, stagger, rise } from '../components/ui/primitives.jsx'
+import HubRoadmap from '../components/sections/HubRoadmap.jsx'
 import ClientLogos from '../components/ui/ClientLogos.jsx'
 import { CONTACT } from '../data/site.js'
 import * as P from '../data/programme.js'
@@ -65,7 +66,7 @@ export default function Programme() {
             {P.STATS.map(([n, l]) => <Cell key={l} title={n}>{l}</Cell>)}
           </Grid>
           <span className="band-label">How we have evolved</span>
-          <LiveRoadmap items={P.STAGES} />
+          <HubRoadmap items={P.STAGES} />
           <Reveal className="center narrow"><p className="sub">Every trainer and every HR who comes to your campus is a working professional. Students learn from people who hire, manage and work in the roles they are preparing for.</p></Reveal>
         </div>
       </section>
@@ -218,7 +219,7 @@ export default function Programme() {
             <Bezel className="info-card dark" coreClass="core-navy">
               <h4>Start a partnership with Sai Consultancy</h4>
               <p>{P.OFFICE.head} · <a href={`tel:${P.OFFICE.phone}`}>{P.OFFICE.phoneLabel}</a></p>
-              <p>{P.OFFICE.emails.map((e, i) => <span key={e}>{i > 0 && ' · '}<a href={`mailto:${e}`}>{e}</a></span>)} · <a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></p>
+              <p><a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></p>
               <p>{P.OFFICE.address} · {P.OFFICE.web}</p>
               <Button to="/contact">Request a proposal</Button>
             </Bezel>
