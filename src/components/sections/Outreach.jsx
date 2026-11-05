@@ -33,9 +33,9 @@ export default function Outreach({ standalone = false }) {
           </div>
 
           <motion.div className="outreach-photos" variants={stagger(0.12)} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-60px' }}>
-            <motion.figure variants={rise} className="op-a"><img src="/images/gallery/session/gallery-017.jpeg" alt="SAI Consultancy session with students in a classroom" loading="lazy" /></motion.figure>
-            <motion.figure variants={rise} className="op-b"><img src="/images/gallery/collabration/gallery-018.jpeg" alt="SAI Consultancy group photo outside a college campus building" loading="lazy" /></motion.figure>
-            <motion.figure variants={rise} className="op-c"><img src="/images/gallery/collabration/gallery-005.jpeg" alt="Large group of students and staff at a SAI Consultancy campus program" loading="lazy" /></motion.figure>
+            <motion.figure variants={rise} className="op-a"><img src="/images/gallery/session/gallery-017.jpeg" alt="Sai Consultancy session with students in a classroom" loading="lazy" /></motion.figure>
+            <motion.figure variants={rise} className="op-b"><img src="/images/gallery/collabration/gallery-018.jpeg" alt="Sai Consultancy group photo outside a college campus building" loading="lazy" /></motion.figure>
+            <motion.figure variants={rise} className="op-c"><img src="/images/gallery/collabration/gallery-005.jpeg" alt="Large group of students and staff at a Sai Consultancy campus program" loading="lazy" /></motion.figure>
           </motion.div>
         </div>
 

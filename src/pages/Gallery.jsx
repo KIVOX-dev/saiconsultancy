@@ -6,6 +6,8 @@ import { GALLERY } from '../data/site.js'
 
 const ALL = { key: 'all', label: 'All', images: GALLERY.flatMap((g) => g.images) }
 const TABS = [ALL, ...GALLERY]
+const ALT = { drive: 'Placement drive with students at a partner college', session: 'Trainer-led training session with students', newsfeed: 'News coverage of Sai Consultancy programmes', collabration: 'Sai Consultancy team collaborating with a partner institution' }
+const altFor = (src, i) => `${ALT[src.split('/')[3]] || 'Sai Consultancy event'} (photo ${i + 1})`
 
 export default function Gallery() {
   const [tab, setTab] = useState('all')
@@ -58,7 +60,7 @@ export default function Gallery() {
                   onClick={() => setSel(i)}
                   aria-label={`Open image ${i + 1}`}
                 >
-                  <span className="bezel"><span className="bezel-core"><img src={src} alt="" loading="lazy" /></span></span>
+                  <span className="bezel"><span className="bezel-core"><img src={src} alt={altFor(src, i)} loading="lazy" /></span></span>
                 </motion.button>
               ))}
             </AnimatePresence>

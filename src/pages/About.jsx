@@ -15,15 +15,15 @@ const PILLARS = [
 export default function About() {
   return (
     <>
-      <PageHero eyebrow="Who we are" title="Preparing students for the future, without fear." accent={['future,']} sub="College-focused training and employability development, built by 200+ working professionals, trainers, mentors and industry contributors." />
+      <PageHero eyebrow="Who we are" title="Preparing students for the future, without fear." accent={['future,']} sub="College-focused training and employability development, built by 300+ working professionals, trainers, mentors and industry contributors." />
 
       <section className="section tight">
         <div className="container split">
           <Reveal>
-            <Bezel className="photo-bezel"><img src="/images/gallery/session/gallery-014.jpeg" alt="SAI Consultancy training" /></Bezel>
+            <Bezel className="photo-bezel"><img src="/images/gallery/session/gallery-014.jpeg" alt="Sai Consultancy training" /></Bezel>
           </Reveal>
           <div className="split-copy">
-            <Reveal><p>SAI Consultancy is built on a strong belief that students must be prepared for the future without fear, confusion, or pressure. We come together with one shared purpose: to add real value to students by bridging the gap between academics and industry expectations.</p></Reveal>
+            <Reveal><p>Sai Consultancy is built on a strong belief that students must be prepared for the future without fear, confusion, or pressure. We come together with one shared purpose: to add real value to students by bridging the gap between academics and industry expectations.</p></Reveal>
             <Reveal delay={0.1}><p>Today's world is moving towards AI-driven systems, intelligent platforms, and skill-based hiring. While this transformation is inevitable, students should not feel intimidated by technology. They should be guided, supported, and gradually equipped to adapt confidently.</p></Reveal>
           </div>
         </div>
@@ -77,7 +77,7 @@ export default function About() {
         <div className="container">
           <Reveal>
             <motion.div whileHover={{ y: -6 }} transition={{ duration: 0.6, ease: EASE }}>
-              <Bezel className="photo-bezel wide"><img src="/images/gallery/collabration/gallery-023.jpeg" alt="SAI Consultancy team and partners together in a meeting room" loading="lazy" /></Bezel>
+              <Bezel className="photo-bezel wide"><img src="/images/gallery/collabration/gallery-023.jpeg" alt="Sai Consultancy team and partners together in a meeting room" loading="lazy" /></Bezel>
             </motion.div>
           </Reveal>
         </div>

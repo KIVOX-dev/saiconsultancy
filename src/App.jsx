@@ -14,6 +14,8 @@ import Gallery from './pages/Gallery.jsx'
 import JobSeekers from './pages/JobSeekers.jsx'
 import Contact from './pages/Contact.jsx'
 import Assistant from './pages/Assistant.jsx'
+import NotFound from './pages/NotFound.jsx'
+import { META, NOT_FOUND } from './data/meta.js'
 
 export default function App() {
   const location = useLocation()
@@ -26,6 +28,20 @@ export default function App() {
     const t = setTimeout(() => document.querySelector(location.hash)?.scrollIntoView({ behavior: 'smooth' }), 450)
     return () => clearTimeout(t)
   }, [location.pathname, location.hash])
+
+  useEffect(() => {
+    const path = location.pathname.replace(/\/+$/, '') || '/'
+    const [title, desc] = META[path] || NOT_FOUND
+    document.title = title
+    let m = document.querySelector('meta[name="description"]')
+    if (!m) { m = document.createElement('meta'); m.name = 'description'; document.head.appendChild(m) }
+    m.content = desc
+    let r = document.querySelector('meta[name="robots"]')
+    if (!META[path]) {
+      if (!r) { r = document.createElement('meta'); r.name = 'robots'; document.head.appendChild(r) }
+      r.content = 'noindex'
+    } else if (r) r.remove()
+  }, [location.pathname])
 
   return (
     <>
@@ -50,7 +66,7 @@ export default function App() {
               <Route path="/job-seekers" element={<JobSeekers />} />
               <Route path="/assistant" element={<Assistant />} />
               <Route path="/contact" element={<Contact />} />
-              <Route path="*" element={<Home />} />
+              <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer />
           </div>

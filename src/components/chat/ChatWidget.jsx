@@ -72,7 +72,7 @@ export default function ChatWidget() {
           <motion.section
             className="chat-panel"
             role="dialog"
-            aria-label="Chat with SAI Consultancy"
+            aria-label="Chat with Sai Consultancy"
             initial={{ opacity: 0, y: 24, scale: 0.94 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 16, scale: 0.96 }}

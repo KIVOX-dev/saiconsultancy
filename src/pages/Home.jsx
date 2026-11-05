@@ -56,7 +56,7 @@ function Trainers() {
         <div className="trainers">
           <Reveal x={0}>
             <div className="trainer-photo">
-              <img src="/images/gallery/session/gallery-017.jpeg" alt="A trainer-led session with students at a SAI Consultancy campus program" loading="lazy" />
+              <img src="/images/gallery/session/gallery-017.jpeg" alt="A trainer-led session with students at a Sai Consultancy campus program" loading="lazy" />
               <span className="photo-chip"><Icon name="users" size={18} /> Trainer-led campus session</span>
             </div>
           </Reveal>
@@ -86,7 +86,7 @@ function Trainers() {
 function Partners() {
   return (
     <section className="partners">
-      <p className="partners-label">Programs delivered under recognized national &amp; state skill initiatives</p>
+      <p className="partners-label">Delivered with national &amp; state skill initiatives and industry forums</p>
       <Marquee slow>
         {PARTNERS.map(([f, alt]) => <span className="partner" key={f}><img src={`/images/partners/${f}.png`} alt={alt} /></span>)}
       </Marquee>
@@ -114,7 +114,7 @@ function Problem() {
                 <li><span>01</span> Training stops at theory</li>
                 <li><span>02</span> Placement prep starts too late</li>
               </ul>
-              <p>SAI Consultancy closes the gap, from the first assessment to the final interview.</p>
+              <p>Sai Consultancy closes the gap, from the first assessment to the final interview.</p>
             </div>
           </Reveal>
           <motion.div className="cells c2" variants={stagger(0.08)} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-60px' }}>
@@ -225,7 +225,7 @@ function Process() {
                 <div className="step-visual">
                   {s.v === 'photo' ? (
                     <>
-                      <img className="photo" src="/images/gallery/collabration/gallery-016.jpeg" alt="SAI Consultancy group photo with students and staff at a college program" />
+                      <img className="photo" src="/images/gallery/collabration/gallery-016.jpeg" alt="Sai Consultancy group photo with students and staff at a college program" />
                       <span className="photo-chip"><Icon name="building" size={18} /> Working with college partners</span>
                     </>
                   ) : s.v}
@@ -312,13 +312,13 @@ function Compare() {
         <Reveal>
           <div style={{ overflowX: 'auto' }}>
             <table className="compare">
-              <thead><tr><th></th><th>Typical campus training</th><th className="us">SAI Consultancy</th></tr></thead>
+              <thead><tr><th></th><th>Typical campus training</th><th className="us">Sai Consultancy</th></tr></thead>
               <tbody>{ROWS.map(([a, b, c]) => <tr key={a}><td>{a}</td><td>{b}</td><td className="us">{c}</td></tr>)}</tbody>
             </table>
           </div>
         </Reveal>
         <motion.div className="stats" style={{ marginTop: 56 }} variants={stagger(0.1)} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-60px' }}>
-          {[[200, '+', 'Trainers, mentors & industry contributors'], [10, '', 'NEP-aligned training programs'], [6, '', 'National & state skill initiatives'], [16, '', 'Services for colleges & students']].map(([n, s, l]) => (
+          {[[300, '+', 'Trainers, mentors & industry contributors'], [10, '', 'NEP-aligned training programs'], [1000, '+', 'HRs in our professional network'], [16, '', 'Services for colleges & students']].map(([n, s, l]) => (
             <motion.div className="stat" key={l} variants={rise}><strong><Counter to={n} suffix={s} /></strong><span>{l}</span></motion.div>
           ))}
         </motion.div>
@@ -332,16 +332,16 @@ function Services() {
   return (
     <section className="section soft">
       <div className="container">
-        <SectionHead eyebrow="More from SAI" title="Talent, training and design under one roof." accent={['Talent,']} />
+        <SectionHead eyebrow="More from Sai Consultancy" title="Talent, training and design under one roof." accent={['Talent,']} />
         <motion.div className="cells c3" variants={stagger(0.1)} initial="hidden" whileInView="show" viewport={{ once: true, margin: '-60px' }}>
           {SERVICES.map((s) => (
             <motion.div key={s.title} variants={rise}>
-              <Link to="/what-we-do" className="svc cell" style={{ padding: 0, display: 'block', height: '100%' }}>
+              <Link to={s.to} className="svc cell" style={{ padding: 0, display: 'block', height: '100%' }}>
                 <div className="svc-img"><img src={s.img} alt={s.title} loading="lazy" /></div>
                 <div className="svc-body">
                   <h4>{s.title}</h4>
                   <p>{s.desc}</p>
-                  <span className="more">Learn more <Icon name="arrow" size={16} /></span>
+                  <span className="more">{s.cta} <Icon name="arrow" size={16} /></span>
                 </div>
               </Link>
             </motion.div>

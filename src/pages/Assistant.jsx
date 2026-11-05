@@ -37,7 +37,7 @@ export default function Assistant() {
 
   return (
     <div className="assist-page">
-      <PageHero eyebrow="AI assistant" title="Ask anything about SAI Consultancy." accent={['Ask']} sub="Programs, campus outreach and admissions, industry trainers, placements. Get an instant answer, any time." />
+      <PageHero eyebrow="AI assistant" title="Ask anything about Sai Consultancy." accent={['Ask']} sub="Programs, campus outreach and admissions, industry trainers, placements. Get an instant answer, any time." />
 
       <section className="section tight">
         <div className="container assist-grid">
@@ -78,7 +78,7 @@ export default function Assistant() {
               <input ref={inputRef} value={text} onChange={(e) => setText(e.target.value)} placeholder="Type your question…" maxLength={500} aria-label="Message" />
               <button disabled={busy || !text.trim()} aria-label="Send"><Icon name="arrow" size={18} /></button>
             </form>
-            <p className="assist-note">I only answer questions about SAI Consultancy. For fees, dates and specific batches, please contact us.</p>
+            <p className="assist-note">I only answer questions about Sai Consultancy. For fees, dates and specific batches, please contact us.</p>
           </motion.div>
         </div>
       </section>

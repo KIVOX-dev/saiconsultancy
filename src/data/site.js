@@ -15,9 +15,9 @@ export const NAV = [
 ]
 
 export const SERVICES = [
-  { img: '/images/imagebox/1.jpg', title: 'Manpower Recruitment Consulting', desc: "We with our prolong experience along with a deep understanding of Manpower Recruitment Processes, provide comprehensive recruitment solutions to maximize our clients' Manpower potential." },
-  { img: '/images/imagebox/2.jpg', title: 'Corporate / Executive Training', desc: 'Training Need Identification, Delivering need based training and skill development in the area of Management / Soft Skills.' },
-  { img: '/images/imagebox/3.jpg', title: 'Graphic / Website Designing', desc: 'With minimal computer knowledge, you can build on efficient websites. In this, you can learn from basic to advanced level so that you can start developing your own web pages.' },
+  { img: '/images/imagebox/1.jpg', title: 'Manpower Recruitment Consulting', to: '/contact', cta: 'Talk to us', desc: 'End-to-end hiring support for companies: sourcing, screening and interview coordination, backed by our network of 1,000+ HRs and 100+ CHROs & CXOs.' },
+  { img: '/images/imagebox/2.jpg', title: 'Corporate & Executive Training', to: '/what-we-do', cta: 'See our programs', desc: 'Training needs analysis followed by need-based programmes in management and soft skills, delivered by working professionals.' },
+  { img: '/images/imagebox/3.jpg', title: 'Graphic & Website Design', to: '/contact', cta: 'Request a quote', desc: 'Websites, brochures, book covers and branding for institutions and businesses, designed and delivered by our in-house team.' },
 ]
 
 export const PARTNERS = [
@@ -35,7 +35,7 @@ export const GALLERY = [
 ]
 
 export const WHAT_WE_DO = [
-  ['Soft Skills & Professional Behaviour', 'How students behave, communicate, and perform in real organizational environments.', ['Workplace communication & professional conduct', 'Team collaboration & accountability', 'Business etiquette & corporate discipline', 'Conflict handling & emotional intelligence', 'Time ownership, adaptability & ownership mindset']],
+  ['Soft Skills & Professional Behaviour', 'How students behave, communicate, and perform in real organizational environments.', ['Workplace communication & professional conduct', 'Team collaboration & accountability', 'Business etiquette & corporate discipline', 'Conflict handling & emotional intelligence', 'Time management, adaptability & ownership mindset']],
   ['Aptitude & Cognitive Skill Development', 'Cognitive and analytical abilities required for placements, competitive exams, and problem-solving roles.', ['Quantitative aptitude', 'Logical & analytical reasoning', 'Decision-making under time constraints', 'Data interpretation & pattern recognition']],
   ['Communicative English & Professional Language Skills', 'Functional English used in offices, interviews, and professional interactions.', ['Spoken English fluency', 'Professional vocabulary & clarity', 'Group discussions & presentations', 'Interview communication techniques']],
   ['Technical & Domain Skill Training', 'Industry-mapped technical readiness based on department, specialization, and industry expectations.', ['Applied technical concepts', 'Tool-based learning (where applicable)', 'Industry-relevant problem solving']],

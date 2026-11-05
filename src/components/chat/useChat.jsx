@@ -3,7 +3,7 @@ import { useCallback, useState } from 'react'
 import { motion } from 'framer-motion'
 import { EASE } from '../ui/primitives.jsx'
 
-export const GREETING = "Hi! I'm the SAI Consultancy assistant. Ask me about our programs, placement support or how to get in touch."
+export const GREETING = "Hi! I'm the Sai Consultancy assistant. Ask me about our programs, placement support or how to get in touch."
 
 const BULLET = /^\s*(?:[-*•]|\d+[.)])\s+(.*)$/
 

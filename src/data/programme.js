@@ -21,7 +21,7 @@ export const STAGES = [
   ['Training', 'Communication, aptitude and soft-skill programmes for colleges'],
   ['Placement', 'Placement training, drives and campus-to-corporate support'],
   ['Industry Panel', '300+ working corporate professionals as trainers'],
-  ['Technology', 'Our own LMS and hiring platforms, TalentSnaps and GoodFreshers'],
+  ['Technology', 'Our own learning and hiring platforms, TalentSnaps and GoodFreshers'],
   ['HR Network', '1,000+ HRs, 100+ CHROs & CXOs and a yearly HR Conclave'],
   ['Workplace Recognition', 'Recognising companies for the overall well-being of their employees'],
 ]
