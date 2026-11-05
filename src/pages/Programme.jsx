@@ -3,8 +3,9 @@ import { motion, useScroll, useSpring } from 'framer-motion'
 import Illo from '../components/ui/Illo.jsx'
 import { PageHero, SectionHead, Reveal, Bezel, Button, EASE, stagger, rise } from '../components/ui/primitives.jsx'
 import StatBand from '../components/ui/StatBand.jsx'
+import FlowBand from '../components/sections/FlowBand.jsx'
 import ProcessList from '../components/sections/ProcessList.jsx'
-import HubRoadmap from '../components/sections/HubRoadmap.jsx'
+import StepFlow from '../components/sections/StepFlow.jsx'
 import ClientLogos from '../components/ui/ClientLogos.jsx'
 import { CONTACT } from '../data/site.js'
 import * as P from '../data/programme.js'
@@ -14,8 +15,8 @@ const Grid = ({ cls = 'c3', children }) => (
     {children}
   </motion.div>
 )
-const Cell = ({ no, title, children }) => (
-  <motion.div className="cell hover" variants={rise}>
+const Cell = ({ no, title, tone, children }) => (
+  <motion.div className={`cell hover ${tone ? `tone-${tone}` : ''}`} variants={rise}>
     {no && <span className="no">{no}</span>}
     <h4>{title}</h4>
     <p>{children}</p>
@@ -66,7 +67,7 @@ export default function Programme() {
           <SectionHead eyebrow="About Sai Consultancy · 20+ years" title="From classroom training to a complete campus-to-corporate ecosystem." accent={['campus-to-corporate']} sub="What began as classroom training in communication and aptitude has grown into trainers from industry, our own learning platforms, placement support and a forum of HR leaders who tell us what employers expect." />
           <StatBand stats={P.STATS} />
           <span className="band-label">How we have evolved</span>
-          <HubRoadmap items={P.STAGES} />
+          <StepFlow items={P.STAGES} label="STAGE" />
           <Reveal className="center narrow"><p className="sub">Every trainer and every HR who comes to your campus is a working professional. Students learn from people who hire, manage and work in the roles they are preparing for.</p></Reveal>
         </div>
       </section>
@@ -97,7 +98,7 @@ export default function Programme() {
           </div>
           <span className="band-label">Our values</span>
           <Grid cls="c4">
-            {P.VALUES.map(([t, d]) => <Cell key={t} title={t}>{d}</Cell>)}
+            {P.VALUES.map(([t, d], i) => <Cell key={t} title={t} tone={['white', 'green', 'dark', 'white'][i]}>{d}</Cell>)}
           </Grid>
           <span className="band-label">Our 9-step integrated employability framework</span>
           <LiveRoadmap items={P.FRAMEWORK} label="STEP" />
@@ -182,10 +183,7 @@ export default function Programme() {
               <Reveal key={t} delay={i * 0.1}><Bezel className="info-card"><h4>{t}</h4><ul className="ticks">{pts.map((p) => <li key={p}>{p}</li>)}</ul></Bezel></Reveal>
             ))}
           </div>
-          <span className="band-label">How we partner with an institution</span>
-          <Grid cls="c5">
-            {P.PARTNER_STEPS.map(([t, d], i) => <Cell key={t} no={`${i + 1}`} title={t}>{d}</Cell>)}
-          </Grid>
+          <FlowBand label="How we partner with an institution" steps={P.PARTNER_STEPS} />
         </div>
       </section>
 

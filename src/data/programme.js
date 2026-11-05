@@ -198,6 +198,6 @@ export const CLIENTS = [
   ['A.G. Arts and Science College', 'ag-college.png'],
   ['PSGR Krishnammal College for Women', 'psgr-krishnammal.png'],
   ['Nirmala College for Women', 'nirmala.png'],
-  ['Avinashilingam University', 'avinashilingam.png'],
+  ['Avinashilingam University', 'avinashilingam-logo.png'],
 ]
 export const CLIENTELE = CLIENTS.map(([n]) => n)
