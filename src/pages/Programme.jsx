@@ -2,6 +2,8 @@ import { useRef } from 'react'
 import { motion, useScroll, useSpring } from 'framer-motion'
 import Illo from '../components/ui/Illo.jsx'
 import { PageHero, SectionHead, Reveal, Bezel, Button, EASE, stagger, rise } from '../components/ui/primitives.jsx'
+import StatBand from '../components/ui/StatBand.jsx'
+import ProcessList from '../components/sections/ProcessList.jsx'
 import HubRoadmap from '../components/sections/HubRoadmap.jsx'
 import ClientLogos from '../components/ui/ClientLogos.jsx'
 import { CONTACT } from '../data/site.js'
@@ -62,9 +64,7 @@ export default function Programme() {
       <section className="section">
         <div className="container">
           <SectionHead eyebrow="About Sai Consultancy · 20+ years" title="From classroom training to a complete campus-to-corporate ecosystem." accent={['campus-to-corporate']} sub="What began as classroom training in communication and aptitude has grown into trainers from industry, our own learning platforms, placement support and a forum of HR leaders who tell us what employers expect." />
-          <Grid cls="c5">
-            {P.STATS.map(([n, l]) => <Cell key={l} title={n}>{l}</Cell>)}
-          </Grid>
+          <StatBand stats={P.STATS} />
           <span className="band-label">How we have evolved</span>
           <HubRoadmap items={P.STAGES} />
           <Reveal className="center narrow"><p className="sub">Every trainer and every HR who comes to your campus is a working professional. Students learn from people who hire, manage and work in the roles they are preparing for.</p></Reveal>
@@ -190,14 +190,13 @@ export default function Programme() {
       </section>
 
       {/* Value */}
-      <section className="section">
-        <div className="container">
-          <SectionHead eyebrow="The value we bring to your institution" title="From strong basics to placement-ready graduates." accent={['placement-ready']} sub="Trained by working professionals, aligned with 1,000+ HRs and 100+ CHROs & CXOs, supported by our own platforms." />
-          <Grid cls="c4">
-            {P.VALUE.map(([t, d], i) => <Cell key={t} no={String(i + 1).padStart(2, '0')} title={t}>{d}</Cell>)}
-          </Grid>
-        </div>
-      </section>
+      <ProcessList
+        eyebrow="The value we bring to your institution"
+        title="From strong basics to placement-ready graduates."
+        accent={['placement-ready']}
+        sub="Trained by working professionals, aligned with 1,000+ HRs and 100+ CHROs & CXOs, supported by our own platforms."
+        items={P.VALUE}
+      />
 
       {/* HR network, workplace, clientele */}
       <section className="section band">

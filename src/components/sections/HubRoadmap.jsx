@@ -6,7 +6,7 @@ const COLORS = ['#1a7f9c', '#1bb961', '#6cc04a', '#e04b4b', '#e8873a', '#1a7f9c'
 const ICONS = ['users', 'briefcase', 'mic', 'laptop', 'building', 'award']
 
 // Per-row geometry: where the line leaves the text (a, % of height) and which way it bends into the node.
-const ROW_A = [14, 50, 86]
+const ROW_A = [20, 50, 80]
 
 /**
  * Hub roadmap: a centre circle with three stages either side. When scrolled into view,
@@ -41,13 +41,18 @@ export default function HubRoadmap({ items, hub = ['20+', 'Years of campus-to-co
             className="hub-dot"
             variants={{ hidden: { scale: 0 }, show: { scale: 1, transition: { delay: delay + 0.2, duration: 0.4, ease: EASE } } }}
           />
-          <svg viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
-            <motion.path
+          <motion.svg
+            viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true"
+            variants={{
+              hidden: { clipPath: right ? 'inset(-20% 0% -20% 100%)' : 'inset(-20% 100% -20% 0%)' },
+              show: { clipPath: 'inset(-20% 0% -20% 0%)', transition: { delay: delay + 0.25, duration: 0.8, ease: EASE } },
+            }}
+          >
+            <path
               d={`M${right ? 100 : 0} ${ROW_A[row]} H${right ? 30 : 70} L${right ? 0 : 100} 50`}
               fill="none" stroke={c} strokeWidth="2" vectorEffect="non-scaling-stroke"
-              variants={{ hidden: { pathLength: 0 }, show: { pathLength: 1, transition: { delay: delay + 0.25, duration: 0.7, ease: EASE } } }}
             />
-          </svg>
+          </motion.svg>
         </span>
         <motion.div
           className="hub-text"

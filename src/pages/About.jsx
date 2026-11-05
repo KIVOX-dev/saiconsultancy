@@ -2,6 +2,7 @@ import { motion } from 'framer-motion'
 import Icon from '../components/ui/Icon.jsx'
 import Illo from '../components/ui/Illo.jsx'
 import { PageHero, SectionHead, Reveal, Bezel, Button, EASE, stagger, rise } from '../components/ui/primitives.jsx'
+import StatBand from '../components/ui/StatBand.jsx'
 import ClientLogos from '../components/ui/ClientLogos.jsx'
 import { STATS } from '../data/programme.js'
 
@@ -60,11 +61,7 @@ export default function About() {
       <section className="section band">
         <div className="container">
           <SectionHead eyebrow="20+ years of campus-to-corporate" title="Experience you can measure." accent={['measure.']} center />
-          <div className="grid-4">
-            {STATS.map(([n, l], i) => (
-              <Reveal key={l} delay={i * 0.08}><Bezel className="info-card"><h4>{n}</h4><p>{l}</p></Bezel></Reveal>
-            ))}
-          </div>
+          <StatBand stats={STATS} />
           <Reveal className="center narrow">
             <p className="sub">Trusted by leading institutions, and many more.</p>
             <ClientLogos />
