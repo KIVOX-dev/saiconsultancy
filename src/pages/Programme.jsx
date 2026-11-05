@@ -2,6 +2,7 @@ import { useRef } from 'react'
 import { motion, useScroll, useSpring } from 'framer-motion'
 import Illo from '../components/ui/Illo.jsx'
 import { PageHero, SectionHead, Reveal, Bezel, Button, EASE, stagger, rise } from '../components/ui/primitives.jsx'
+import ClientLogos from '../components/ui/ClientLogos.jsx'
 import { CONTACT } from '../data/site.js'
 import * as P from '../data/programme.js'
 
@@ -17,26 +18,6 @@ const Cell = ({ no, title, children }) => (
     <p>{children}</p>
   </motion.div>
 )
-
-function ModuleTable({ head, rows, extra }) {
-  return (
-    <Reveal>
-      <div className="mod-wrap">
-        <table className="mod-table">
-          <thead><tr><th>#</th><th>Module</th><th>What students learn</th>{extra && <th>{extra}</th>}</tr></thead>
-          <tbody>
-            {rows.map((r, i) => (
-              <tr key={r[0]}>
-                <td>{i + 1}</td><td><b>{r[0]}</b></td><td>{r[1]}</td>{extra && <td>{r[2]}</td>}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </Reveal>
-  )
-}
-
 
 /** Live roadmap: the line fills as you scroll and each stage lights up when reached. */
 function LiveRoadmap({ items, label = 'STAGE' }) {
@@ -119,32 +100,6 @@ export default function Programme() {
           </Grid>
           <span className="band-label">Our 9-step integrated employability framework</span>
           <LiveRoadmap items={P.FRAMEWORK} label="STEP" />
-        </div>
-      </section>
-
-      {/* Modules */}
-      <section className="section band" id="modules">
-        <div className="container">
-          <SectionHead eyebrow="Year I · Communicative English with Verbal Aptitude" title="Built on listening, speaking, reading and writing." accent={['listening,']} sub="The four-skills framework (LSRW), with a dedicated verbal aptitude track." />
-          <span className="band-label">Part A · Communicative English (LSRW) · 7 modules</span>
-          <ModuleTable rows={P.YEAR1_A} />
-          <span className="band-label">Part B · Verbal Aptitude · 4 modules</span>
-          <ModuleTable rows={P.YEAR1_B} />
-        </div>
-      </section>
-
-      <section className="section">
-        <div className="container">
-          <SectionHead eyebrow="Year II · Aptitude training · 8 modules" title="The speed and accuracy recruiter rounds screen for." accent={['speed']} />
-          <ModuleTable rows={P.YEAR2} />
-        </div>
-      </section>
-
-      <section className="section band">
-        <div className="container">
-          <SectionHead eyebrow="Year III · Soft skills & placement readiness · 8 modules" title="Working HRs lead interview practice, shaped by department, cluster and company." accent={['interview', 'practice,']} />
-          <ModuleTable rows={P.YEAR3} extra="Department / cluster-specific focus" />
-          <Reveal><p className="sub">Note: all modules in this proposal can be discussed and reframed according to the college's needs.</p></Reveal>
         </div>
       </section>
 
@@ -252,7 +207,7 @@ export default function Programme() {
           <Reveal><Bezel className="info-card"><p>{P.WORKPLACE.text}</p><ul className="ticks cols">{P.WORKPLACE.points.map((r) => <li key={r}>{r}</li>)}</ul></Bezel></Reveal>
           <span className="band-label">Our clientele</span>
           <p className="sub">A few of the institutions that trust Sai Consultancy with their students' training and placement, and many more:</p>
-          <div className="pill-row">{P.CLIENTELE.map((c) => <span className="pill" key={c}>{c}</span>)}</div>
+          <ClientLogos />
         </div>
       </section>
 

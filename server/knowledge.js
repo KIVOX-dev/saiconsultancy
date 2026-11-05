@@ -34,7 +34,7 @@ Students and early-career candidates get aptitude, English, resume, HR/technical
 
 TRAINING & PLACEMENT PROGRAMME 2026-27 (page: /training-placement)
 - 20+ years of campus training; 25+ institutional associations; 300+ working professionals as trainers; 1,000+ HRs and 100+ CHROs & CXOs in our network; yearly HR Conclave; workplace awards recognising 50+ companies and 50 HR Excellence Awards in 2026.
-- Three-year pathway: Year I Communicative English with Verbal Aptitude (LSRW, 7 modules + 4 verbal aptitude modules, Versant-style spoken tasks); Year II Aptitude (8 modules); Year III Soft Skills & Placement Readiness (8 modules: resume and LinkedIn, grooming, time management, group discussion, mock interviews by working HRs, department-, cluster- and company-specific training). Modules can be reframed to the college's needs.
+- Three-year pathway: Year I Communicative English with Verbal Aptitude; Year II Aptitude; Year III Soft Skills & Placement Readiness (resume, grooming, group discussion, mock interviews by working HRs, department-, cluster- and company-specific training). Content can be tailored to the college's needs.
 - 9-step framework: Understand, Assess, Design, Train, Practise, Measure, Improve, Prepare, Connect.
 - Six clusters: Commerce & Management; Computer Science & IT; Media & Design; Sciences; Hospitality & Tourism; Arts & Social Work.
 - Value-added: HR Conclave, CXO Conclave, Job Fair, industry MoUs, admission support, international university MoUs.

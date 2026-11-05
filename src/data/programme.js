@@ -59,45 +59,6 @@ export const FRAMEWORK = [
   ['Connect', 'Drives, HR network and GoodFreshers openings.', 'Drives & offers record'],
 ]
 
-export const YEAR1_A = [
-  ['Listening Skills', 'Active listening, note-taking, understanding Indian, British and American accents, comprehension from conversations, talks and workplace dialogues, dictation practice'],
-  ['Pronunciation & Accent', 'Phonetics, vowel and consonant sounds, word and sentence stress, intonation and rhythm, reducing mother-tongue influence, neutral accent'],
-  ['Spoken Fluency & Versant Round', 'Reading aloud, sentence repeats and builds, story retelling, passage reconstruction and open questions, with feedback on clarity, pace and accuracy'],
-  ['Reading Skills', 'Skimming and scanning, inference, vocabulary in context, reading speed, business emails, articles and reports'],
-  ['Writing Skills', 'Sentence and paragraph writing, formal and business emails, letters, summaries, short essays and reports'],
-  ['Grammar for Communication', 'Tenses, voice, reported speech, conditionals, concord, modals, prepositions and common errors, taught through speaking and writing tasks'],
-  ['Professional Communication', 'Self-introduction, telephone etiquette, presentations, group discussion basics, interview questions and answers, body language'],
-]
-
-export const YEAR1_B = [
-  ['Vocabulary for Verbal Tests', 'Synonyms, antonyms, idioms and phrases, one-word substitution, analogies, word roots, commonly confused words'],
-  ['Verbal Ability', 'Error spotting, sentence correction and improvement, sentence completion, para jumbles, cloze passages'],
-  ['Reading Comprehension & Critical Reasoning', 'Passage-based questions, main idea, inference, tone, assumptions and conclusions, para summary'],
-  ['Verbal Test Strategy', 'Recruiter-pattern verbal tests, timed practice and accuracy techniques'],
-]
-
-export const YEAR2 = [
-  ['Number System & Arithmetic', 'Number system, HCF and LCM, percentages, ratios and proportions, averages, calculation shortcuts'],
-  ['Business Mathematics', 'Profit and loss, simple and compound interest, discounts, mixtures and alligation'],
-  ['Time & Motion', 'Time and work, pipes and cisterns, time-speed-distance, trains, boats and streams'],
-  ['Algebra, Ages & Counting', 'Linear equations, ages, progressions, permutations and combinations, probability'],
-  ['Data Interpretation', 'Tables, bar, line and pie charts, caselets, data sufficiency'],
-  ['Logical Reasoning', 'Number and letter series, blood relations, directions, ranking and ordering, syllogisms, statements and conclusions, Venn diagrams'],
-  ['Puzzles & Coding', 'Coding-decoding, logic puzzles, seating arrangements, grid and number puzzles, calendar and clock problems'],
-  ['Placement Test Strategy', 'Company-pattern practice tests, speed and accuracy, time management, full-length mock tests'],
-]
-
-export const YEAR3 = [
-  ['Resume & LinkedIn Profile', 'ATS-friendly resumes, cover letters, a complete LinkedIn profile and portfolio presentation', "Resumes and portfolios tailored to each cluster's roles"],
-  ['Grooming & Corporate Etiquette', 'Dress code, body language, email and meeting etiquette, workplace conduct', 'Industry dress and conduct norms, incl. hospitality and media'],
-  ['Time Management & Work Ethics', 'Prioritising, planning, ownership, punctuality and professional responsibility', 'Deadlines and workflows of each sector'],
-  ['Group Discussion', 'Structuring arguments, leading and contributing, current-affairs and case-based GD practice', 'Topics from business, technology, media, science and social sectors'],
-  ['Mock Interviews', 'HR and technical mock interviews by working HRs and professionals, with individual feedback', "Panels drawn from the student's target industry"],
-  ['Department-Specific Training', "Core domain concepts and tools each department's recruiters test in interviews", 'Every UG and PG department of the partner institution'],
-  ['Cluster-Specific Training', 'Industry-integrated skills for the job roles open to each cluster', 'Commerce & Management, CS & IT, Media & Design, Sciences, Hospitality & Tourism, Arts & Social Work'],
-  ['Company-Specific Training', 'Test patterns, interview rounds and role expectations of companies visiting campus', 'Prepared drive by drive for the recruiters each college invites'],
-]
-
 export const CLUSTERS = [
   ['Commerce & Management', 'B.Com and its specialisations, BBA, M.Com, MBA', 'Tally and GST practice, banking and financial services, accounting process roles, Excel for business, sales, marketing and HR operations'],
   ['Computer Science & IT', 'BCA, B.Sc CS / IT / Data Science / AI & ML, Cyber Security, M.Sc CS, MCA', 'Programming and problem solving, SQL and data analytics, full-stack basics, AI tools, cyber security basics, technical interviews'],
@@ -225,11 +186,19 @@ export const WORKPLACE = {
   ],
 }
 
-export const CLIENTELE = [
-  'Avinashilingam University',
-  'PSGR Krishnammal College for Women',
-  'Nirmala College for Women',
-  'CMS College of Science and Commerce',
-  'Bishop Ambrose College',
-  'A.G. College of Arts and Science',
+// [display name, logo file in public/images/clients/]
+export const CLIENTS = [
+  ['Dr. Mahalingam College of Engineering and Technology', 'mcet.png'],
+  ['Bishop Ambrose College', 'bishop-ambrose.jpg'],
+  ['Nallamuthu Gounder Mahalingam College', 'ngm.png'],
+  ['VLB Janakiammal College of Arts and Science', 'vlb-janakiammal.svg'],
+  ['Shankara College of Arts and Science', 'sankara.png'],
+  ['CMS College of Commerce', 'cms.png'],
+  ['Suguna College of Engineering', 'suguna-engineering.png'],
+  ['Suguna College of Arts and Science', 'suguna-arts.png'],
+  ['A.G. Arts and Science College', 'ag-college.png'],
+  ['PSGR Krishnammal College for Women', 'psgr-krishnammal.png'],
+  ['Nirmala College for Women', 'nirmala.png'],
+  ['Avinashilingam University', 'avinashilingam.png'],
 ]
+export const CLIENTELE = CLIENTS.map(([n]) => n)

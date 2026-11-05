@@ -2,7 +2,8 @@ import { motion } from 'framer-motion'
 import Icon from '../components/ui/Icon.jsx'
 import Illo from '../components/ui/Illo.jsx'
 import { PageHero, SectionHead, Reveal, Bezel, Button, EASE, stagger, rise } from '../components/ui/primitives.jsx'
-import { STATS, CLIENTELE } from '../data/programme.js'
+import ClientLogos from '../components/ui/ClientLogos.jsx'
+import { STATS } from '../data/programme.js'
 
 const PILLARS = [
   ['target', 'Structured aptitude and employability training'],
@@ -65,7 +66,8 @@ export default function About() {
             ))}
           </div>
           <Reveal className="center narrow">
-            <p className="sub">Trusted by institutions including {CLIENTELE.join(', ')} and many more.</p>
+            <p className="sub">Trusted by leading institutions, and many more.</p>
+            <ClientLogos />
             <Button to="/training-placement">See the full Training & Placement Programme</Button>
           </Reveal>
         </div>
