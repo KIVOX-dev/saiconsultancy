@@ -1,6 +1,7 @@
-import { motion } from 'framer-motion'
+import { useRef } from 'react'
+import { motion, useScroll, useSpring } from 'framer-motion'
 import Illo from '../components/ui/Illo.jsx'
-import { PageHero, SectionHead, Reveal, Bezel, Button, stagger, rise } from '../components/ui/primitives.jsx'
+import { PageHero, SectionHead, Reveal, Bezel, Button, EASE, stagger, rise } from '../components/ui/primitives.jsx'
 import { CONTACT } from '../data/site.js'
 import * as P from '../data/programme.js'
 
@@ -36,6 +37,40 @@ function ModuleTable({ head, rows, extra }) {
   )
 }
 
+
+/** Live roadmap: the line fills as you scroll and each stage lights up when reached. */
+function LiveRoadmap({ items, label = 'STAGE' }) {
+  const ref = useRef(null)
+  const { scrollYProgress } = useScroll({ target: ref, offset: ['start 70%', 'end 60%'] })
+  const fill = useSpring(scrollYProgress, { stiffness: 90, damping: 24, mass: 0.4 })
+  return (
+    <div className="evo" ref={ref}>
+      <div className="evo-track" aria-hidden="true"><motion.i className="evo-fill" style={{ scaleY: fill }} /></div>
+      {items.map(([t, d, out], i) => {
+        const last = i === items.length - 1
+        return (
+          <motion.div
+            key={t}
+            className={`evo-item ${i % 2 ? 'right' : 'left'}`}
+            initial={{ opacity: 0, x: i % 2 ? 48 : -48, filter: 'blur(8px)' }}
+            whileInView={{ opacity: 1, x: 0, filter: 'blur(0px)' }}
+            viewport={{ once: false, margin: '-35% 0px -35% 0px' }}
+            transition={{ duration: 0.8, ease: EASE }}
+          >
+            <span className={`evo-dot ${last ? 'goal' : ''}`}><b>{i + 1}</b></span>
+            <div className="evo-card">
+              <span className="no">{label} {i + 1}</span>
+              <h4>{t}</h4>
+              <p>{d}</p>
+              {out && <p className="evo-out">Output: {out}</p>}
+            </div>
+          </motion.div>
+        )
+      })}
+    </div>
+  )
+}
+
 export default function Programme() {
   return (
     <>
@@ -49,9 +84,7 @@ export default function Programme() {
             {P.STATS.map(([n, l]) => <Cell key={l} title={n}>{l}</Cell>)}
           </Grid>
           <span className="band-label">How we have evolved</span>
-          <Grid cls="c3">
-            {P.STAGES.map(([t, d], i) => <Cell key={t} no={`STAGE ${i + 1}`} title={t}>{d}</Cell>)}
-          </Grid>
+          <LiveRoadmap items={P.STAGES} />
           <Reveal className="center narrow"><p className="sub">Every trainer and every HR who comes to your campus is a working professional. Students learn from people who hire, manage and work in the roles they are preparing for.</p></Reveal>
         </div>
       </section>
@@ -85,11 +118,7 @@ export default function Programme() {
             {P.VALUES.map(([t, d]) => <Cell key={t} title={t}>{d}</Cell>)}
           </Grid>
           <span className="band-label">Our 9-step integrated employability framework</span>
-          <Grid cls="c3">
-            {P.FRAMEWORK.map(([t, d, out], i) => (
-              <Cell key={t} no={`STEP ${i + 1}`} title={t}>{d} <br /><b>Output: {out}</b></Cell>
-            ))}
-          </Grid>
+          <LiveRoadmap items={P.FRAMEWORK} label="STEP" />
         </div>
       </section>
 
@@ -167,6 +196,7 @@ export default function Programme() {
           <div className="grid-3" style={{ gridTemplateColumns: '1fr 1fr' }}>
             <Reveal>
               <Bezel className="info-card">
+                <img className="plat-logo ts" src="/images/platforms/talentsnaps.png" alt="TalentSnaps: skill meets opportunities" loading="lazy" />
                 <h4>TalentSnaps · Aptitude training & placement-management ERP</h4>
                 <p>{P.TALENTSNAPS.intro}</p>
                 <p><b>Placement workflow:</b> {P.TALENTSNAPS.workflow.join(' → ')}</p>
@@ -175,6 +205,7 @@ export default function Programme() {
             </Reveal>
             <Reveal delay={0.1}>
               <Bezel className="info-card">
+                <img className="plat-logo" src="/images/platforms/goodfreshers.png" alt="GoodFreshers" loading="lazy" />
                 <h4>GoodFreshers · Communication, soft skills & hiring</h4>
                 <p>{P.GOODFRESHERS.intro}</p>
                 <ul className="ticks">{P.GOODFRESHERS.features.map((f) => <li key={f}>{f}</li>)}</ul>
