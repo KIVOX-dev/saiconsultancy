@@ -9,6 +9,7 @@ import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import WhatWeDo from './pages/WhatWeDo.jsx'
 import CampusOutreach from './pages/CampusOutreach.jsx'
+import Programme from './pages/Programme.jsx'
 import Gallery from './pages/Gallery.jsx'
 import JobSeekers from './pages/JobSeekers.jsx'
 import Contact from './pages/Contact.jsx'
@@ -44,6 +45,7 @@ export default function App() {
               <Route path="/about" element={<About />} />
               <Route path="/what-we-do" element={<WhatWeDo />} />
               <Route path="/campus-outreach" element={<CampusOutreach />} />
+              <Route path="/training-placement" element={<Programme />} />
               <Route path="/gallery" element={<Gallery />} />
               <Route path="/job-seekers" element={<JobSeekers />} />
               <Route path="/assistant" element={<Assistant />} />

@@ -4,6 +4,7 @@ import Icon from '../components/ui/Icon.jsx'
 import Illo from '../components/ui/Illo.jsx'
 import { PageHero, Reveal, Bezel, Button } from '../components/ui/primitives.jsx'
 import { CONTACT } from '../data/site.js'
+import { OFFICE } from '../data/programme.js'
 
 export default function Contact() {
   const [params] = useSearchParams()
@@ -37,6 +38,14 @@ export default function Contact() {
           <div className="contact-side">
             <Reveal>
               <Bezel className="info-card"><Illo name="phone" /><h4>Our consultant</h4><a className="big-link" href={`tel:${CONTACT.phone}`}>{CONTACT.phoneLabel}</a></Bezel>
+            </Reveal>
+            <Reveal delay={0.05}>
+              <Bezel className="info-card">
+                <Illo name="building" /><h4>Operations: {OFFICE.head.split(',')[0]}</h4>
+                <a className="big-link" href={`tel:${OFFICE.phone}`}>{OFFICE.phoneLabel}</a>
+                <p>{OFFICE.emails.map((e, i) => <span key={e}>{i > 0 && ' · '}<a href={`mailto:${e}`}>{e}</a></span>)}</p>
+                <p>{OFFICE.address}</p>
+              </Bezel>
             </Reveal>
             <Reveal delay={0.1}>
               <Bezel className="info-card"><Illo name="mail" /><h4>Contact us by e-mail</h4><a className="big-link" href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></Bezel>

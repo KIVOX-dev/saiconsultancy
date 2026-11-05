@@ -32,5 +32,17 @@ Placement assistance for trained students, plus job fairs for partner colleges: 
 JOB SEEKERS
 Students and early-career candidates get aptitude, English, resume, HR/technical interview and workplace skills training, AI mock interviews, skill-gap mapping and mentor guidance. Roadmap: Assess, Train, Showcase.
 
+TRAINING & PLACEMENT PROGRAMME 2026-27 (page: /training-placement)
+- 20+ years of campus training; 25+ institutional associations; 300+ working professionals as trainers; 1,000+ HRs and 100+ CHROs & CXOs in our network; yearly HR Conclave; workplace awards recognising 50+ companies and 50 HR Excellence Awards in 2026.
+- Three-year pathway: Year I Communicative English with Verbal Aptitude (LSRW, 7 modules + 4 verbal aptitude modules, Versant-style spoken tasks); Year II Aptitude (8 modules); Year III Soft Skills & Placement Readiness (8 modules: resume and LinkedIn, grooming, time management, group discussion, mock interviews by working HRs, department-, cluster- and company-specific training). Modules can be reframed to the college's needs.
+- 9-step framework: Understand, Assess, Design, Train, Practise, Measure, Improve, Prepare, Connect.
+- Six clusters: Commerce & Management; Computer Science & IT; Media & Design; Sciences; Hospitality & Tourism; Arts & Social Work.
+- Value-added: HR Conclave, CXO Conclave, Job Fair, industry MoUs, admission support, international university MoUs.
+- Assessment: baseline diagnostic, module tests, communication evaluation, mock aptitude, GD evaluation, mock interviews, placement-readiness review; bands Placement Ready / Developing / Needs Support. Reports include department-wise data and NAAC Criterion 5 and NIRF-ready records.
+- Platforms: TalentSnaps (aptitude training and placement-management ERP: announce, apply, screen, select, offer letter, NIRF/NAAC report) and GoodFreshers (communication and soft-skills practice plus a hiring platform where companies post openings and students apply).
+- Partner institutions include Avinashilingam University, PSGR Krishnammal College for Women, Nirmala College for Women, CMS College of Science and Commerce, Bishop Ambrose College, A.G. College of Arts and Science.
+- India Skills Report 2026: about 56% of Indian graduates are employable.
+
 CONTACT
+Operations Head: Esakkimuthu V, 93630 22019, hr@saiconsultancy.in, info@saiconsultancy.in. Address: #71, Peelamedu, Maheshwari Nagar, Coimbatore, Tamil Nadu 641004.
 Phone/WhatsApp: +91 90876 74688. Email: admin@saiconsultancy.in. Contact page: /contact.`

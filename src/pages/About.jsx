@@ -1,7 +1,8 @@
 import { motion } from 'framer-motion'
 import Icon from '../components/ui/Icon.jsx'
 import Illo from '../components/ui/Illo.jsx'
-import { PageHero, SectionHead, Reveal, Bezel, EASE, stagger, rise } from '../components/ui/primitives.jsx'
+import { PageHero, SectionHead, Reveal, Bezel, Button, EASE, stagger, rise } from '../components/ui/primitives.jsx'
+import { STATS, CLIENTELE } from '../data/programme.js'
 
 const PILLARS = [
   ['target', 'Structured aptitude and employability training'],
@@ -52,6 +53,21 @@ export default function About() {
               <Bezel className="info-card"><Illo name={ic} /><h4>{t}</h4><p>{d}</p></Bezel>
             </Reveal>
           ))}
+        </div>
+      </section>
+
+      <section className="section band">
+        <div className="container">
+          <SectionHead eyebrow="20+ years of campus-to-corporate" title="Experience you can measure." accent={['measure.']} center />
+          <div className="grid-4">
+            {STATS.map(([n, l], i) => (
+              <Reveal key={l} delay={i * 0.08}><Bezel className="info-card"><h4>{n}</h4><p>{l}</p></Bezel></Reveal>
+            ))}
+          </div>
+          <Reveal className="center narrow">
+            <p className="sub">Trusted by institutions including {CLIENTELE.join(', ')} and many more.</p>
+            <Button to="/training-placement">See the full Training & Placement Programme</Button>
+          </Reveal>
         </div>
       </section>
 

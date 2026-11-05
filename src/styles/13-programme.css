@@ -1,0 +1,11 @@
+/* Training & Placement Programme page */
+.mod-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 18px; background: #fff; margin-bottom: 20px; }
+.mod-table { width: 100%; border-collapse: collapse; font-size: 15px; min-width: 640px; }
+.mod-table th { text-align: left; font-family: var(--mono); font-size: 12px; letter-spacing: 0.04em; text-transform: uppercase; color: var(--green-d); background: var(--soft); padding: 14px 18px; }
+.mod-table td { padding: 14px 18px; border-top: 1px solid var(--line); vertical-align: top; }
+.mod-table td:first-child { font-family: var(--mono); color: var(--green-d); width: 48px; }
+.mod-table b { color: var(--ink); font-weight: 500; }
+.pill-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.info-card.dark a { color: #fff; text-decoration: underline; text-underline-offset: 3px; }
+.cells + .band-label, .mod-wrap + .band-label, .grid-3 + .band-label, .bezel + .band-label { margin-top: 40px; display: block; }
+@media (max-width: 960px) { .grid-3[style] { grid-template-columns: 1fr !important; } }

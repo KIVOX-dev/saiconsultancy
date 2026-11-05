@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom'
 import { CONTACT, NAV } from '../../data/site.js'
 import Icon from '../ui/Icon.jsx'
+import { OFFICE } from '../../data/programme.js'
 
-const PROGRAMS = ['Campus Outreach & Admissions', 'Soft Skills', 'Aptitude Training', 'Communicative English', 'Interview Readiness', 'Job-Oriented Training', 'Career Guidance']
+const PROGRAMS = ['Campus Outreach & Admissions', 'Training & Placement Programme','Soft Skills', 'Aptitude Training', 'Communicative English', 'Interview Readiness', 'Job-Oriented Training', 'Career Guidance']
 
 export default function Footer() {
   return (
@@ -19,7 +20,7 @@ export default function Footer() {
           </div>
           <div>
             <h6>Programs</h6>
-            <ul>{PROGRAMS.map((p) => <li key={p}><Link to={p.startsWith('Campus') ? '/campus-outreach' : '/what-we-do'}>{p}</Link></li>)}</ul>
+            <ul>{PROGRAMS.map((p) => <li key={p}><Link to={p.startsWith('Campus') ? '/campus-outreach' : p.startsWith('Training &') ? '/training-placement' : '/what-we-do'}>{p}</Link></li>)}</ul>
           </div>
           <div>
             <h6>Company</h6>
@@ -30,6 +31,8 @@ export default function Footer() {
             <ul>
               <li><a href={`mailto:${CONTACT.email}`}><Icon name="mail" size={16} /> {CONTACT.email}</a></li>
               <li><a href={`tel:${CONTACT.phone}`}><Icon name="phone" size={16} /> {CONTACT.phoneLabel}</a></li>
+              <li><a href={`tel:${OFFICE.phone}`}><Icon name="phone" size={16} /> {OFFICE.phoneLabel} (Operations)</a></li>
+              <li>{OFFICE.address}</li>
             </ul>
           </div>
         </div>
