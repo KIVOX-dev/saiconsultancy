@@ -110,3 +110,16 @@
 /* spacing: a label that follows another block gets breathing room */
 .container > * + .band-label { margin-top: 56px; }
 .client-logo img { max-height: 80px; max-width: 170px; }
+
+/* Brand navy instead of near-black on this page */
+.info-card.dark.navy, .info-card.dark.navy.bezel { background: var(--blue); border-color: var(--blue); }
+.info-card.dark.navy .core-navy { background: var(--blue); }
+.info-card.dark.navy p { color: #d4e0f0; }
+.cell.hover.tone-dark, .cell.hover.tone-dark:hover { background: var(--blue); }
+.cell.hover.tone-dark p { color: #d4e0f0; }
+.proc { background: var(--blue); }
+.proc-sub { color: #c5d4e8; }
+.proc-head .eyebrow { color: #d4e0f0; }
+.proc-item p { color: #e1eaf6; }
+.proc-dot { background: #2c7d73; box-shadow: 0 0 0 6px rgba(91, 227, 154, 0.16); }
+.proc-no { color: #5be39a; }

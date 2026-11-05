@@ -90,7 +90,7 @@ export default function Programme() {
             <Reveal><Bezel className="info-card"><Illo name="compass" /><h4>Vision</h4><p>{P.VISION}</p></Bezel></Reveal>
             <Reveal delay={0.1}><Bezel className="info-card"><Illo name="target" /><h4>Mission</h4><p>{P.MISSION}</p></Bezel></Reveal>
             <Reveal delay={0.2}>
-              <Bezel className="info-card dark" coreClass="core-navy">
+              <Bezel className="info-card dark navy" coreClass="core-navy">
                 <h4>The employability gap · {P.GAP.stat}</h4>
                 <p>{P.GAP.text}</p>
               </Bezel>
@@ -213,7 +213,7 @@ export default function Programme() {
       <section className="section">
         <div className="container">
           <Reveal>
-            <Bezel className="info-card dark" coreClass="core-navy">
+            <Bezel className="info-card dark navy" coreClass="core-navy">
               <h4>Start a partnership with Sai Consultancy</h4>
               <p>{P.OFFICE.head} · <a href={`tel:${P.OFFICE.phone}`}>{P.OFFICE.phoneLabel}</a></p>
               <p><a href={`mailto:${CONTACT.email}`}>{CONTACT.email}</a></p>
