@@ -144,3 +144,13 @@ a.cell:hover, .cell.hover:hover { background: var(--soft); }
 .cta .checks span { display: inline-flex; gap: 8px; align-items: center; } .cta .checks svg { color: var(--green); }
 .cta .acts { display: flex; justify-content: center; flex-wrap: wrap; gap: 12px; }
 
+
+/* stat band: one row for any number of stats on desktop; no orphan cell when it wraps to 2 columns */
+@media (min-width: 961px) {
+  .stats.stat-band { grid-template-columns: repeat(var(--n, 4), 1fr); }
+  .stats.stat-band[style*="--n: 5"] .stat { padding: 34px 22px; }
+  .stats.stat-band[style*="--n: 5"] .stat strong { font-size: clamp(40px, 4.2vw, 60px); }
+}
+@media (max-width: 960px) {
+  .stats.stat-band .stat:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}

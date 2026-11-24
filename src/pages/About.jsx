@@ -21,7 +21,7 @@ export default function About() {
       <section className="section tight">
         <div className="container split">
           <Reveal>
-            <Bezel className="photo-bezel"><img src="/images/gallery/session/gallery-014.jpeg" alt="Sai Consultancy training" /></Bezel>
+            <Bezel className="photo-bezel"><img src="/images/gallery/session/gallery-035.jpeg" alt="Sai Consultancy trainers with students in a classroom" /></Bezel>
           </Reveal>
           <div className="split-copy">
             <Reveal><p>Sai Consultancy is built on a strong belief that students must be prepared for the future without fear, confusion, or pressure. We come together with one shared purpose: to add real value to students by bridging the gap between academics and industry expectations.</p></Reveal>

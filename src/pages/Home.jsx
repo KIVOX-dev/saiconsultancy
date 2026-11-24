@@ -58,7 +58,7 @@ function Trainers() {
         <div className="trainers">
           <Reveal x={0}>
             <div className="trainer-photo">
-              <img src="/images/gallery/session/gallery-034.jpeg" style={{ objectPosition: '22% center' }} alt="A trainer-led session with students at a Sai Consultancy campus program" loading="lazy" />
+              <img src="/images/gallery/session/gallery-040.jpeg" style={{ objectPosition: '50% center' }} alt="A trainer-led session with students at a Sai Consultancy campus program" loading="lazy" />
               <span className="photo-chip"><Icon name="users" size={18} /> Trainer-led campus session</span>
             </div>
           </Reveal>
