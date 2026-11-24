@@ -27,12 +27,15 @@ export const PARTNERS = [
 
 const g = (folder, nums) => nums.map((n) => `/images/gallery/${folder}/gallery-${String(n).padStart(3, '0')}.jpeg`)
 
+// Newest photos: shown first in All and Drives.
+export const NEW_GALLERY = g('jobfair', [25, 26])
+
 export const GALLERY = [
-  { key: 'drive', label: 'Drives', images: g('drive', [1, 2, 3, 20, 22, 24]) },
+  { key: 'drive', label: 'Drives', images: [...NEW_GALLERY, ...g('drive', [1, 2, 3, 20, 22, 24])] },
   { key: 'session', label: 'Sessions', images: g('session', [11, 13, 14, 17]) },
   { key: 'newsfeed', label: 'News', images: g('newsfeed', [7, 8, 9, 10]) },
   { key: 'collabration', label: 'Collaborations', images: g('collabration', [4, 5, 6, 12, 16, 18, 19, 21, 23]) },
-  { key: 'jobfair', label: 'Job Fairs', images: g('jobfair', [25, 26]) },
+  { key: 'jobfair', label: 'Job Fairs', images: [...NEW_GALLERY, ...g('drive', [1, 2])] },
 ]
 
 export const WHAT_WE_DO = [

@@ -7,9 +7,9 @@ import Marquee from '../components/ui/Marquee.jsx'
 import Outreach from '../components/sections/Outreach.jsx'
 import { ReportMock, HexField, GapMock, TrainMock } from '../components/sections/Mocks.jsx'
 import { Button, Eyebrow, Reveal, SplitHeading, SectionHead, Counter, EASE, stagger, rise } from '../components/ui/primitives.jsx'
-import { PARTNERS, SERVICES, WHAT_WE_DO, PROGRAM_ICONS, GALLERY } from '../data/site.js'
+import { PARTNERS, SERVICES, WHAT_WE_DO, PROGRAM_ICONS, GALLERY, NEW_GALLERY } from '../data/site.js'
 
-const GALLERY_IMGS = GALLERY.flatMap((g) => g.images)
+const GALLERY_IMGS = [...new Set(GALLERY.flatMap((g) => g.images))].filter((s) => !NEW_GALLERY.includes(s))
 const MOSAIC = [GALLERY_IMGS[0], GALLERY_IMGS[7], GALLERY_IMGS[10], GALLERY_IMGS[14], GALLERY_IMGS[19], GALLERY_IMGS[4], GALLERY_IMGS[12]]
 
 /* ---------------------------------------------------------------- hero */
