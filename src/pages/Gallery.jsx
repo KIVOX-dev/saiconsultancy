@@ -6,7 +6,7 @@ import { GALLERY } from '../data/site.js'
 
 const ALL = { key: 'all', label: 'All', images: GALLERY.flatMap((g) => g.images) }
 const TABS = [ALL, ...GALLERY]
-const ALT = { drive: 'Placement drive with students at a partner college', session: 'Trainer-led training session with students', newsfeed: 'News coverage of Sai Consultancy programmes', collabration: 'Sai Consultancy team collaborating with a partner institution' }
+const ALT = { drive: 'Placement drive with students at a partner college', session: 'Trainer-led training session with students', newsfeed: 'News coverage of Sai Consultancy programmes', collabration: 'Sai Consultancy team collaborating with a partner institution', jobfair: 'Job fair and campus drive poster' }
 const altFor = (src, i) => `${ALT[src.split('/')[3]] || 'Sai Consultancy event'} (photo ${i + 1})`
 
 export default function Gallery() {
