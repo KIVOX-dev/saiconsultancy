@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import Icon from '../components/ui/Icon.jsx'
 import { PageHero, EASE } from '../components/ui/primitives.jsx'
-import { GALLERY, NEW_GALLERY, NEW_SESSIONS } from '../data/site.js'
+import { GALLERY, NEW_GALLERY, NEW_SESSIONS, FEATURED_PHOTO } from '../data/site.js'
 
 const ALL = { key: 'all', label: 'All', images: [...new Set([...NEW_SESSIONS, ...NEW_GALLERY, ...GALLERY.flatMap((g) => g.images)])] }
 const TABS = [ALL, ...GALLERY]
@@ -52,7 +52,7 @@ export default function Gallery() {
                 <motion.button
                   layout
                   key={src}
-                  className="tile"
+                  className={`tile${i === 0 && src === FEATURED_PHOTO ? ' featured' : ''}`}
                   initial={{ opacity: 0, y: 30, scale: 0.96 }}
                   animate={{ opacity: 1, y: 0, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.94 }}

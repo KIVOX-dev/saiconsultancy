@@ -12,7 +12,7 @@ import { PARTNERS, SERVICES, WHAT_WE_DO, PROGRAM_ICONS, GALLERY, NEW_GALLERY, NE
 const GALLERY_IMGS = [...new Set(GALLERY.flatMap((g) => g.images))].filter((s) => !NEW_GALLERY.includes(s) && !NEW_SESSIONS.includes(s))
 // Mostly the original photos, with three hand-picked recent ones (m1, m3, m5).
 const RECENT = (n) => `/images/gallery/session/gallery-${String(n).padStart(3, '0')}.jpeg`
-const MOSAIC = [GALLERY_IMGS[0], RECENT(43), GALLERY_IMGS[10], RECENT(44), GALLERY_IMGS[19], RECENT(41), GALLERY_IMGS[12]]
+const MOSAIC = [GALLERY_IMGS[0], RECENT(43), GALLERY_IMGS[10], RECENT(44), '/images/gallery/collabration/gallery-018.jpeg', RECENT(41), GALLERY_IMGS[12]]
 
 /* ---------------------------------------------------------------- hero */
 function Hero() {
@@ -58,7 +58,7 @@ function Trainers() {
         <div className="trainers">
           <Reveal x={0}>
             <div className="trainer-photo">
-              <img src="/images/gallery/session/gallery-032.jpeg" style={{ objectPosition: '70% center' }} alt="A trainer-led session with students at a Sai Consultancy campus program" loading="lazy" />
+              <img src="/images/gallery/session/gallery-034.jpeg" style={{ objectPosition: '22% center' }} alt="A trainer-led session with students at a Sai Consultancy campus program" loading="lazy" />
               <span className="photo-chip"><Icon name="users" size={18} /> Trainer-led campus session</span>
             </div>
           </Reveal>
