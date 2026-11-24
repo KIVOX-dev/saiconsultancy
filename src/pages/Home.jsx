@@ -7,10 +7,12 @@ import Marquee from '../components/ui/Marquee.jsx'
 import Outreach from '../components/sections/Outreach.jsx'
 import { ReportMock, HexField, GapMock, TrainMock } from '../components/sections/Mocks.jsx'
 import { Button, Eyebrow, Reveal, SplitHeading, SectionHead, Counter, EASE, stagger, rise } from '../components/ui/primitives.jsx'
-import { PARTNERS, SERVICES, WHAT_WE_DO, PROGRAM_ICONS, GALLERY, NEW_GALLERY } from '../data/site.js'
+import { PARTNERS, SERVICES, WHAT_WE_DO, PROGRAM_ICONS, GALLERY, NEW_GALLERY, NEW_SESSIONS } from '../data/site.js'
 
-const GALLERY_IMGS = [...new Set(GALLERY.flatMap((g) => g.images))].filter((s) => !NEW_GALLERY.includes(s))
-const MOSAIC = [GALLERY_IMGS[0], GALLERY_IMGS[7], GALLERY_IMGS[10], GALLERY_IMGS[14], GALLERY_IMGS[19], GALLERY_IMGS[4], GALLERY_IMGS[12]]
+const GALLERY_IMGS = [...new Set(GALLERY.flatMap((g) => g.images))].filter((s) => !NEW_GALLERY.includes(s) && !NEW_SESSIONS.includes(s))
+// Mostly the original photos, with three hand-picked recent ones (m1, m3, m5).
+const RECENT = (n) => `/images/gallery/session/gallery-${String(n).padStart(3, '0')}.jpeg`
+const MOSAIC = [GALLERY_IMGS[0], RECENT(43), GALLERY_IMGS[10], RECENT(44), GALLERY_IMGS[19], RECENT(41), GALLERY_IMGS[12]]
 
 /* ---------------------------------------------------------------- hero */
 function Hero() {
@@ -56,7 +58,7 @@ function Trainers() {
         <div className="trainers">
           <Reveal x={0}>
             <div className="trainer-photo">
-              <img src="/images/gallery/session/gallery-017.jpeg" alt="A trainer-led session with students at a Sai Consultancy campus program" loading="lazy" />
+              <img src="/images/gallery/session/gallery-032.jpeg" style={{ objectPosition: '70% center' }} alt="A trainer-led session with students at a Sai Consultancy campus program" loading="lazy" />
               <span className="photo-chip"><Icon name="users" size={18} /> Trainer-led campus session</span>
             </div>
           </Reveal>

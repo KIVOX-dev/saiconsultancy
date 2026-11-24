@@ -2,9 +2,9 @@ import { useEffect, useState } from 'react'
 import { AnimatePresence, motion } from 'framer-motion'
 import Icon from '../components/ui/Icon.jsx'
 import { PageHero, EASE } from '../components/ui/primitives.jsx'
-import { GALLERY, NEW_GALLERY } from '../data/site.js'
+import { GALLERY, NEW_GALLERY, NEW_SESSIONS } from '../data/site.js'
 
-const ALL = { key: 'all', label: 'All', images: [...new Set([...NEW_GALLERY, ...GALLERY.flatMap((g) => g.images)])] }
+const ALL = { key: 'all', label: 'All', images: [...new Set([...NEW_SESSIONS, ...NEW_GALLERY, ...GALLERY.flatMap((g) => g.images)])] }
 const TABS = [ALL, ...GALLERY]
 const ALT = { drive: 'Placement drive with students at a partner college', session: 'Trainer-led training session with students', newsfeed: 'News coverage of Sai Consultancy programmes', collabration: 'Sai Consultancy team collaborating with a partner institution', jobfair: 'Job fair and campus drive poster' }
 const altFor = (src, i) => `${ALT[src.split('/')[3]] || 'Sai Consultancy event'} (photo ${i + 1})`
