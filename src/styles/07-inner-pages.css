@@ -58,7 +58,9 @@
 .tabs button.active { color: #fff; border-color: var(--blue); }
 .tab-pill { position: absolute; inset: 0; background: var(--blue); }
 .masonry { columns: 3; column-gap: 14px; }
-.masonry .tile.featured { column-span: all; display: block; width: 100%; max-width: 860px; margin: 0 auto 14px; }
+.masonry .tile.featured { column-span: all; display: block; width: 100%; max-width: none; margin: 0 0 14px; }
+.masonry .tile.featured img { width: 100%; aspect-ratio: 2 / 1; height: auto; object-fit: cover; object-position: 50% 78%; }
+@media (max-width: 960px) { .masonry .tile.featured img { aspect-ratio: 3 / 2; object-position: 50% 70%; } }
 .tile { display: block; width: 100%; break-inside: avoid; margin: 0 0 14px; padding: 0; border: 0; background: none; text-align: left; }
 .tile .bezel { display: block; height: auto; }
 .tile .bezel-core { display: block; height: auto; padding: 0; }
